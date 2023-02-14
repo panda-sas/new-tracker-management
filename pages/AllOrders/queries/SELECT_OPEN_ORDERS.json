@@ -68,7 +68,7 @@
               {
                 "condition": "EQ",
                 "key": "isComplete",
-                "value": "false"
+                "value": "FALSE"
               }
             ]
           }

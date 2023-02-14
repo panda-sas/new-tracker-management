@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "ORDER_UPDATE",
+    "name": "INSERT_NEW_ORDER",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "UPDATE_ONE"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{...OpenOrdersTable.selectedRow }\n}}"
+          "data": "{\n\t\"Dispatcher\": {{DispatcherInput.text}},\n\t\"Scientist\": {{ScientistSelect.selectedOptionValue}},\n\t\"OrderId\": {{Generator.getUUID()}},\n\t\"isComplete\": {{\"FALSE\"}}\n}\n"
         },
         "sheetName": {
           "data": "Order"
@@ -73,14 +73,17 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{...OpenOrdersTable.selectedRow }\n"
+      "\"FALSE\"",
+      "DispatcherInput.text",
+      "Generator.getUUID()",
+      "ScientistSelect.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllOrders_ORDER_UPDATE",
+  "id": "AllOrders_INSERT_NEW_ORDER",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ebe932c06b5b5299c31cd4"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ebfb2bc06b5b5299c31dd2"
 }

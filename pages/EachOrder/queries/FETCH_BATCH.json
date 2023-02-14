@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "ORDER_UPDATE",
+    "name": "FETCH_BATCH",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllOrders",
+    "pageId": "EachOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "UPDATE_ONE"
+          "data": "FETCH_MANY"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,11 +41,8 @@
         "range": {
           "data": ""
         },
-        "rowObjects": {
-          "data": "{{\n{...OpenOrdersTable.selectedRow }\n}}"
-        },
         "sheetName": {
-          "data": "Order"
+          "data": "Batch"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -53,34 +50,41 @@
         "smartSubstitution": {
           "data": true
         },
+        "sortBy": {
+          "data": [
+            {
+              "column": "",
+              "order": "Ascending"
+            }
+          ]
+        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND"
+            "condition": "AND",
+            "children": [
+              {
+                "condition": "LT"
+              }
+            ]
           }
         }
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.rowObjects.data"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "\n{...OpenOrdersTable.selectedRow }\n"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllOrders_ORDER_UPDATE",
+  "id": "EachOrder_FETCH_BATCH",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ebe932c06b5b5299c31cd4"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec1206a01b764626f25df3"
 }

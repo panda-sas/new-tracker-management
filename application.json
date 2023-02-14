@@ -7,6 +7,10 @@
     {
       "id": "AllOrders",
       "isDefault": false
+    },
+    {
+      "id": "EachOrder",
+      "isDefault": false
     }
   ],
   "viewMode": false,
