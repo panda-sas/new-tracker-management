@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "UPDATE_BATCH",
+    "name": "INSERT_BATCH",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
+    "pageId": "BatchOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "UPDATE_ONE"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{...OpenBatchTable.selectedRow }\n}}"
+          "data": "{\t\n\t\"OrderId\" : {{appsmith.URL.queryParams.OrderId}},\n\t\"Target\": {{TargetSelect. selectedOptionValue }},\t\n\t\"Scientist\": {{ScientistSelect. selectedOptionValue }},\n\t\"Project\": {{ProjectSelect. selectedOptionValue }},\n\t\"BatchId\": {{Generator.getUUID()}},\n\t\"IsPhysicallyReceived\" : {{false}},\n\t\"IsCDDRegistered\" : {{false}},\n\t\"IsInitialCheckedOut\" : {{false}}\n}\n"
         },
         "sheetName": {
           "data": "Batch"
@@ -73,14 +73,19 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{...OpenBatchTable.selectedRow }\n"
+      "Generator.getUUID()",
+      "ProjectSelect. selectedOptionValue ",
+      "ScientistSelect. selectedOptionValue ",
+      "TargetSelect. selectedOptionValue ",
+      "appsmith.URL.queryParams.OrderId",
+      "false"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_UPDATE_BATCH",
+  "id": "BatchOrder_INSERT_BATCH",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec32948e503f7636517487"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec2eb6c06b5b5299c31f9a"
 }

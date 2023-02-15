@@ -15,7 +15,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
+    "pageId": "BatchOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -45,7 +45,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_Api1",
+  "id": "BatchOrder_Api1",
   "deleted": false,
   "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec3c5e3d6355314505f44c"
 }

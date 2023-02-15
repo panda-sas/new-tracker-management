@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_SCIENTISTS",
+    "name": "UPDATE_BATCH",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
+    "pageId": "BatchOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,8 +41,11 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{\n{...OpenBatchTable.selectedRow }\n}}"
+        },
         "sheetName": {
-          "data": "Scientist"
+          "data": "Batch"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -50,41 +53,34 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "LT"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.rowObjects.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "\n{...OpenBatchTable.selectedRow }\n"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_FETCH_SCIENTISTS",
+  "id": "BatchOrder_UPDATE_BATCH",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec18b7a01b764626f25e21"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec32948e503f7636517487"
 }

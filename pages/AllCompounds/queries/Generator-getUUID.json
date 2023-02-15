@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
-    "collectionId": "EachOrder_Generator",
+    "pageId": "AllCompounds",
+    "collectionId": "AllCompounds_Generator",
     "actionConfiguration": {
       "timeoutInMillisecond": 0,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_Generator.getUUID",
+  "id": "AllCompounds_Generator.getUUID",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec2ef58e503f7636517454"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46d4a01b764626f25fe0"
 }

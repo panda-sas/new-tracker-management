@@ -550,7 +550,7 @@
                           "boxShadow": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "Add/View Batch",
-                          "onClick": "{{navigateTo('EachOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}"
                         }
                       },
                       "borderWidth": "\n0.5",
@@ -622,7 +622,7 @@
                   "isDisabled": false,
                   "key": "3253e3pm7y",
                   "isDeprecated": false,
-                  "tabName": "Orders",
+                  "tabName": "Open Orders",
                   "rightColumn": 430.5,
                   "detachFromLayout": true,
                   "widgetId": "gplhqyt2k8",
@@ -633,6 +633,527 @@
                   "renderMode": "CANVAS",
                   "isLoading": false,
                   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                },
+                {
+                  "tabId": "tab19h0uhgnvo",
+                  "widgetName": "Canvas115",
+                  "displayName": "Canvas",
+                  "topRow": 1,
+                  "bottomRow": 890,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 900,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "borderColor": "",
+                      "isVisibleDownload": true,
+                      "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+                      "topRow": 2,
+                      "isSortable": false,
+                      "onPageChange": "{{getAllCustomers.run()}}",
+                      "type": "TABLE_WIDGET_V2",
+                      "inlineEditingSaveOption": "ROW_LEVEL",
+                      "animateLoading": true,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.OrderId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Scientist.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Dispatcher.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.ShipmentDate.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.TrackingID.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.NoOfShipments.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.isComplete.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.rowIndex.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.saveButtonColor"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.saveBorderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.discardBorderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isSaveDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.Scientist.selectOptions"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.boxShadow"
+                        },
+                        {
+                          "key": "tableData"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "delimiter": ",",
+                      "variant": "VARIANT3",
+                      "defaultSelectedRowIndex": 0,
+                      "showInlineEditingOptionDropdown": true,
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": false,
+                      "isVisible": true,
+                      "enableClientSideSearch": true,
+                      "version": 1,
+                      "totalRecordsCount": 0,
+                      "isLoading": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "editActions": {
+                          "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                        }
+                      },
+                      "borderRadius": "0px",
+                      "defaultSelectedRowIndices": [
+                        0
+                      ],
+                      "widgetName": "AllOrdersTable",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "Scientist",
+                        "Dispatcher",
+                        "OrderId",
+                        "ShipmentDate",
+                        "TrackingID",
+                        "isComplete",
+                        "customColumn1",
+                        "NoOfShipments",
+                        "EditActions1",
+                        "rowIndex"
+                      ],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isSaveDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                        }
+                      ],
+                      "compactMode": "DEFAULT",
+                      "displayName": "Table",
+                      "bottomRow": 50,
+                      "columnWidthMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "photo": 122,
+                        "cname": 202,
+                        "OrderId": 288,
+                        "Scientist": 207,
+                        "Dispatcher": 188,
+                        "ShipmentDate": 150,
+                        "TrackingID": 160,
+                        "Form": 99,
+                        "NoOfShipments": 180,
+                        "isComplete": 157
+                      },
+                      "parentRowSpace": 10,
+                      "hideCard": false,
+                      "parentColumnSpace": 17.9375,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onPageChange"
+                        },
+                        {
+                          "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.onSave"
+                        },
+                        {
+                          "key": "primaryColumns.Scientist.onSubmit"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
+                        }
+                      ],
+                      "primaryColumns": {
+                        "OrderId": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "OrderId",
+                          "id": "OrderId",
+                          "alias": "OrderId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Order ID",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"OrderId\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Scientist": {
+                          "allowCellWrapping": true,
+                          "index": 1,
+                          "width": 150,
+                          "originalId": "Scientist",
+                          "id": "Scientist",
+                          "alias": "Scientist",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Scientist",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Scientist\"]))}}",
+                          "validation": {},
+                          "cellBackground": "",
+                          "onSubmit": "",
+                          "selectOptions": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( SELECT_ALL_SCIENTISTS.data.map(d => (\n\t{\n\t\t\"label\" :d.ScientistName,\n\t\t\"value\": d.Email\n\t}\n)\n)))}}"
+                        },
+                        "Dispatcher": {
+                          "allowCellWrapping": false,
+                          "index": 2,
+                          "width": 150,
+                          "originalId": "Dispatcher",
+                          "id": "Dispatcher",
+                          "alias": "Dispatcher",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Dispatcher",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Dispatcher\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "ShipmentDate": {
+                          "allowCellWrapping": false,
+                          "index": 3,
+                          "width": 150,
+                          "originalId": "ShipmentDate",
+                          "id": "ShipmentDate",
+                          "alias": "ShipmentDate",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "date",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "Shipment Date",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ShipmentDate\"]))}}",
+                          "validation": {},
+                          "cellBackground": "",
+                          "inputFormat": "MM/DD/YYYY",
+                          "outputFormat": "MM/DD/YYYY"
+                        },
+                        "TrackingID": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "TrackingID",
+                          "id": "TrackingID",
+                          "alias": "TrackingID",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "Tracking ID",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TrackingID\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "NoOfShipments": {
+                          "allowCellWrapping": false,
+                          "index": 6,
+                          "width": 150,
+                          "originalId": "NoOfShipments",
+                          "id": "NoOfShipments",
+                          "alias": "NoOfShipments",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "Expected Shipments",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NoOfShipments\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "isComplete": {
+                          "allowCellWrapping": false,
+                          "index": 7,
+                          "width": 150,
+                          "originalId": "isComplete",
+                          "id": "isComplete",
+                          "alias": "isComplete",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "TOP",
+                          "columnType": "switch",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "is Complete",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"isComplete\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "rowIndex": {
+                          "allowCellWrapping": false,
+                          "index": 8,
+                          "width": 150,
+                          "originalId": "rowIndex",
+                          "id": "rowIndex",
+                          "alias": "rowIndex",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "rowIndex",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "EditActions1": {
+                          "allowCellWrapping": false,
+                          "index": 9,
+                          "width": 150,
+                          "originalId": "EditActions1",
+                          "id": "EditActions1",
+                          "alias": "EditActions1",
+                          "columnType": "editActions",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": true,
+                          "label": "Save / Discard",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "saveIconAlign": "left",
+                          "discardIconAlign": "left",
+                          "saveActionLabel": "Save",
+                          "discardActionLabel": "Discard",
+                          "saveButtonColor": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+                          "discardButtonColor": "#F22B2B",
+                          "saveBorderRadius": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "discardBorderRadius": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "discardButtonVariant": "TERTIARY",
+                          "isSaveDisabled": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
+                          "isDiscardDisabled": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
+                          "onSave": "{{ORDER_UPDATE.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                        },
+                        "customColumn1": {
+                          "allowCellWrapping": false,
+                          "index": 10,
+                          "width": 150,
+                          "originalId": "customColumn1",
+                          "id": "customColumn1",
+                          "alias": "Batch",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "button",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Batch",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "cellBackground": "",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "#1e3a8a",
+                          "borderRadius": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+                          "customAlias": "",
+                          "buttonLabel": "Add/View Batch",
+                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": AllOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}"
+                        }
+                      },
+                      "borderWidth": "\n0.5",
+                      "onRowSelected": "",
+                      "key": "mi706qsnar",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "textSize": "0.875rem",
+                      "widgetId": "rg91y6lzn3",
+                      "allowAddNewRow": false,
+                      "tableData": "{{SELECT_ALL_ORDERS.data}}",
+                      "label": "Data",
+                      "searchKey": "",
+                      "parentId": "14wwifmi84",
+                      "serverSidePaginationEnabled": false,
+                      "renderMode": "CANVAS",
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "isVisiblePagination": true,
+                      "cellBackground": "",
+                      "verticalAlignment": "CENTER"
+                    }
+                  ],
+                  "key": "neesbzonml",
+                  "isDeprecated": false,
+                  "tabName": "All Orders",
+                  "rightColumn": 1148,
+                  "detachFromLayout": true,
+                  "widgetId": "14wwifmi84",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "22ker1dkts",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
                 }
               ],
               "key": "fqdezz8vpn",
@@ -646,11 +1167,18 @@
               "shouldShowTabs": true,
               "tabsObj": {
                 "tab1": {
-                  "label": "Orders",
+                  "label": "Open Orders",
                   "id": "tab1",
                   "widgetId": "gplhqyt2k8",
                   "isVisible": true,
                   "index": 0
+                },
+                "tab19h0uhgnvo": {
+                  "id": "tab19h0uhgnvo",
+                  "index": 1,
+                  "label": "All Orders",
+                  "widgetId": "14wwifmi84",
+                  "isVisible": true
                 }
               },
               "isVisible": true,
@@ -735,7 +1263,7 @@
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "All Orders",
+                      "text": "Orders",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 29,
@@ -1291,6 +1819,14 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "AllOrders_SELECT_ALL_ORDERS",
+              "name": "SELECT_ALL_ORDERS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "AllOrders_SELECT_OPEN_ORDERS",
               "name": "SELECT_OPEN_ORDERS",

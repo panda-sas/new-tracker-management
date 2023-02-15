@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_PROJECTS",
+    "name": "SELECT_ALL_ORDERS",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
+    "pageId": "AllOrders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "ProjectScientist"
+          "data": "Order"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -53,7 +53,7 @@
         "sortBy": {
           "data": [
             {
-              "column": "ProjectName",
+              "column": "",
               "order": "Ascending"
             }
           ]
@@ -84,7 +84,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_FETCH_PROJECTS",
+  "id": "AllOrders_SELECT_ALL_ORDERS",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec1b3b8e503f76365173b1"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec441ba01b764626f25fbc"
 }

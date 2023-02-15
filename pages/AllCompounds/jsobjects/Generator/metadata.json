@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "Generator",
-    "pageId": "EachOrder",
+    "pageId": "AllCompounds",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "EachOrder_Generator",
+  "id": "AllCompounds_Generator",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec2ee1c06b5b5299c31fa1"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46c08e503f763651769c"
 }

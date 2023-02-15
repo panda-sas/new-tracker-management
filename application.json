@@ -9,7 +9,11 @@
       "isDefault": false
     },
     {
-      "id": "EachOrder",
+      "id": "BatchOrder",
+      "isDefault": false
+    },
+    {
+      "id": "AllCompounds",
       "isDefault": false
     }
   ],

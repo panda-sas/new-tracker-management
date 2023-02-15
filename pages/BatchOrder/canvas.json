@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "EachOrder",
-    "slug": "eachorder",
+    "name": "BatchOrder",
+    "slug": "batchorder",
     "layouts": [
       {
         "viewMode": false,
@@ -102,7 +102,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Selected Order {{appsmith.URL.queryParams.OrderId\n}}",
+                      "text": "Batch of Order {{appsmith.URL.queryParams.OrderId\n}}",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 43,
@@ -328,7 +328,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 4,
+                      "topRow": 5,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -467,7 +467,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 53,
+                      "bottomRow": 54,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -1535,7 +1535,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "EachOrder_FETCH_PROJECTS",
+              "id": "BatchOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -1543,7 +1543,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "EachOrder_FETCH_SCIENTISTS",
+              "id": "BatchOrder_FETCH_SCIENTISTS",
               "name": "FETCH_SCIENTISTS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -1551,7 +1551,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "EachOrder_FETCH_TARGETS",
+              "id": "BatchOrder_FETCH_TARGETS",
               "name": "FETCH_TARGETS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -1561,7 +1561,7 @@
           ],
           [
             {
-              "id": "EachOrder_FETCH_BATCH",
+              "id": "BatchOrder_FETCH_BATCH",
               "name": "FETCH_BATCH",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -1574,7 +1574,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "EachOrder",
+        "id": "BatchOrder",
         "deleted": false,
         "policies": [],
         "userPermissions": []

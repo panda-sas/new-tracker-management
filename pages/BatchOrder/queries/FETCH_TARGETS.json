@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_BATCH",
+    "name": "FETCH_TARGETS",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
+    "pageId": "BatchOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "Batch"
+          "data": "Targets"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -66,9 +66,7 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "EQ",
-                "key": "OrderId",
-                "value": "{{appsmith.URL.queryParams.OrderId}}"
+                "condition": "LT"
               }
             ]
           }
@@ -76,23 +74,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.where.data.children[0].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.URL.queryParams.OrderId"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_FETCH_BATCH",
+  "id": "BatchOrder_FETCH_TARGETS",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec1206a01b764626f25df3"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec17e7a01b764626f25e1a"
 }

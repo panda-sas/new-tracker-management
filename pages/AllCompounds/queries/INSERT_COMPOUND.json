@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_TARGETS",
+    "name": "INSERT_COMPOUND",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "EachOrder",
+    "pageId": "AllCompounds",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,8 +41,11 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{\t\n\t\"BatchId\" : {{appsmith.URL.queryParams.BatchId}},\n\t\"CompoundId\": {{Generator.getUUID()}}\n}\n"
+        },
         "sheetName": {
-          "data": "Targets"
+          "data": "Compound"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -50,41 +53,35 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "LT"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.rowObjects.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Generator.getUUID()",
+      "appsmith.URL.queryParams.BatchId"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_FETCH_TARGETS",
+  "id": "AllCompounds_INSERT_COMPOUND",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec17e7a01b764626f25e1a"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46fc8e503f763651769f"
 }
