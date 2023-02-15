@@ -96,12 +96,16 @@
                       "overflow": "NONE",
                       "fontFamily": "Inter",
                       "leftColumn": 2,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Selected Order ",
+                      "text": "Selected Order {{appsmith.URL.queryParams.OrderId\n}}",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 29,
+                      "rightColumn": 43,
                       "textAlign": "LEFT",
                       "dynamicHeight": "FIXED",
                       "widgetId": "aso411sgtd",
@@ -1526,16 +1530,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "EachOrder_FETCH_BATCH",
-              "name": "FETCH_BATCH",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "EachOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
@@ -1557,6 +1551,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "EachOrder_FETCH_BATCH",
+              "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.OrderId"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

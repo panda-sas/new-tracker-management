@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_BATCH",
+    "name": "UPDATE_BATCH",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,6 +41,9 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{\n{...OpenBatchTable.selectedRow }\n}}"
+        },
         "sheetName": {
           "data": "Batch"
         },
@@ -50,49 +53,34 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "EQ",
-                "key": "OrderId",
-                "value": "{{appsmith.URL.queryParams.OrderId}}"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[0].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.URL.queryParams.OrderId"
+      "\n{...OpenBatchTable.selectedRow }\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "EachOrder_FETCH_BATCH",
+  "id": "EachOrder_UPDATE_BATCH",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec1206a01b764626f25df3"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec32948e503f7636517487"
 }

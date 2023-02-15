@@ -144,6 +144,12 @@
                         },
                         {
                           "key": "primaryColumns.Scientist.selectOptions"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.boxShadow"
                         }
                       ],
                       "leftColumn": 1,
@@ -196,6 +202,7 @@
                         "isComplete",
                         "NoOfShipments",
                         "EditActions1",
+                        "customColumn1",
                         "rowIndex"
                       ],
                       "dynamicPropertyPathList": [
@@ -242,6 +249,9 @@
                         },
                         {
                           "key": "primaryColumns.Scientist.onSubmit"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
                         }
                       ],
                       "primaryColumns": {
@@ -507,10 +517,44 @@
                           "isSaveDisabled": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
                           "onSave": "{{ORDER_UPDATE.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                        },
+                        "customColumn1": {
+                          "allowCellWrapping": false,
+                          "index": 10,
+                          "width": 150,
+                          "originalId": "customColumn1",
+                          "id": "customColumn1",
+                          "alias": "Batch",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "button",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Batch",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "cellBackground": "",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "#1e3a8a",
+                          "borderRadius": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+                          "customAlias": "",
+                          "buttonLabel": "Add/View Batch",
+                          "onClick": "{{navigateTo('EachOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}"
                         }
                       },
                       "borderWidth": "\n0.5",
-                      "onRowSelected": "{{navigateTo('EachOrder',{OrderId:OpenOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}",
+                      "onRowSelected": "",
                       "key": "mi706qsnar",
                       "isDeprecated": false,
                       "rightColumn": 64,

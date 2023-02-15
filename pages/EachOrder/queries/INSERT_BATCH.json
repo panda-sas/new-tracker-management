@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\t\n\"Target\": {{TargetSelect. selectedOptionValue }},\t\n\"Scientist\": {{ScientistSelect. selectedOptionValue }},\n\"Project\": {{ProjectSelect. selectedOptionValue }},\n\"BatchId\": {{Generator.getUUID()}},\n\"IsPhysicallyReceived\" : {{false}},\n\"IsCDDRegistered\" : {{false}},\n\"IsInitialCheckedOut\" : {{false}}\n}\n"
+          "data": "{\t\n\t\"OrderId\" : {{appsmith.URL.queryParams.OrderId}},\n\t\"Target\": {{TargetSelect. selectedOptionValue }},\t\n\t\"Scientist\": {{ScientistSelect. selectedOptionValue }},\n\t\"Project\": {{ProjectSelect. selectedOptionValue }},\n\t\"BatchId\": {{Generator.getUUID()}},\n\t\"IsPhysicallyReceived\" : {{false}},\n\t\"IsCDDRegistered\" : {{false}},\n\t\"IsInitialCheckedOut\" : {{false}}\n}\n"
         },
         "sheetName": {
           "data": "Batch"
@@ -77,6 +77,7 @@
       "ProjectSelect. selectedOptionValue ",
       "ScientistSelect. selectedOptionValue ",
       "TargetSelect. selectedOptionValue ",
+      "appsmith.URL.queryParams.OrderId",
       "false"
     ],
     "userSetOnLoad": false,
