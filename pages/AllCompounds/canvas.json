@@ -173,6 +173,7 @@
                       ],
                       "leftColumn": 0,
                       "delimiter": ",",
+                      "variant": "VARIANT3",
                       "defaultSelectedRowIndex": 0,
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -229,14 +230,18 @@
                           "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         }
                       ],
+                      "compactMode": "TALL",
                       "displayName": "Table",
-                      "bottomRow": 34,
+                      "bottomRow": 45,
                       "columnWidthMap": {
                         "task": 158,
                         "step": 180,
                         "status": 181,
                         "action": 265,
-                        "CurrentAmountLeft": 183
+                        "CurrentAmountLeft": 264,
+                        "InitialAmount": 259,
+                        "Concentration": 226,
+                        "SACCId": 209
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -546,7 +551,7 @@
                 "group"
               ],
               "topRow": 0,
-              "bottomRow": 19,
+              "bottomRow": 20,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -566,12 +571,12 @@
                   "widgetName": "Canvas113",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 200,
+                  "bottomRow": 190,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 400,
+                  "minHeight": 200,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [
@@ -585,6 +590,52 @@
                   "children": [
                     {
                       "boxShadow": "none",
+                      "widgetName": "SubTitleText",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 9,
+                      "bottomRow": 13,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 16.62109375,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "Inter",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Target : {{appsmith.URL.queryParams.Target\n}} | Scientist : {{appsmith.URL.queryParams.Scientist\n}}",
+                      "key": "czyq0gtp0e",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 59,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "wo23wdvkjl",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#fafafa",
+                      "version": 1,
+                      "parentId": "qxovz6lj5r",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.8rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
                       "widgetName": "HeaderTitleText",
                       "dynamicPropertyPathList": [
                         {
@@ -593,8 +644,8 @@
                       ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 5,
-                      "bottomRow": 9,
+                      "topRow": 3,
+                      "bottomRow": 8,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -606,10 +657,10 @@
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Compounds",
+                      "text": "Compounds Details",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 29,
+                      "rightColumn": 59,
                       "textAlign": "LEFT",
                       "dynamicHeight": "FIXED",
                       "widgetId": "zg1wjrkmzj",
@@ -622,7 +673,7 @@
                       "isLoading": false,
                       "borderRadius": "0px",
                       "maxDynamicHeight": 9000,
-                      "fontSize": "1.8rem",
+                      "fontSize": "2.5rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -634,8 +685,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 9,
-                      "bottomRow": 13,
+                      "topRow": 13,
+                      "bottomRow": 17,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -648,14 +699,17 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Summary view of all compounds",
+                      "text": "Batch ID : {{appsmith.URL.queryParams.BatchId\n}} ",
                       "key": "nf5ngvo9vw",
                       "isDeprecated": false,
-                      "rightColumn": 36,
+                      "rightColumn": 59,
                       "textAlign": "LEFT",
                       "dynamicHeight": "FIXED",
                       "widgetId": "e3s3gzlnc9",

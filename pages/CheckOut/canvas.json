@@ -324,7 +324,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 0,
+                      "topRow": 1,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -405,11 +405,13 @@
                       ],
                       "leftColumn": 0,
                       "delimiter": ",",
+                      "variant": "VARIANT3",
                       "defaultSelectedRowIndex": 0,
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": true,
                       "isVisible": true,
+                      "fontStyle": "",
                       "enableClientSideSearch": true,
                       "version": 1,
                       "totalRecordsCount": 0,
@@ -438,6 +440,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "primaryColumnId": "CheckOutId",
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -470,12 +473,17 @@
                           "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         }
                       ],
+                      "compactMode": "TALL",
                       "displayName": "Table",
-                      "bottomRow": 44,
+                      "bottomRow": 47,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
-                        "status": 75
+                        "status": 75,
+                        "Purpose": 169,
+                        "ActualReturnDate": 200,
+                        "IsResultedUploadedToCDD": 244,
+                        "CDDResultURL": 201
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -632,7 +640,7 @@
                           "outputFormat": "MM/DD/YYYY"
                         },
                         "Purpose": {
-                          "allowCellWrapping": false,
+                          "allowCellWrapping": true,
                           "index": 5,
                           "width": 150,
                           "originalId": "Purpose",
@@ -696,7 +704,7 @@
                           "alias": "ActualReturnDate",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -713,7 +721,9 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ActualReturnDate\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "inputFormat": "MM/DD/YYYY",
+                          "outputFormat": "MM/DD/YYYY"
                         },
                         "IsResultedUploadedToCDD": {
                           "allowCellWrapping": false,
@@ -736,7 +746,7 @@
                           "isEditable": true,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Is Resulted UploadedToCDD",
+                          "label": "Is Resulted Uploaded ToCDD",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"IsResultedUploadedToCDD\"]))}}",
@@ -772,7 +782,7 @@
                           "cellBackground": ""
                         },
                         "Reviewer": {
-                          "allowCellWrapping": false,
+                          "allowCellWrapping": true,
                           "index": 10,
                           "width": 150,
                           "originalId": "Reviewer",
@@ -780,7 +790,7 @@
                           "alias": "Reviewer",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "select",
+                          "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -837,7 +847,7 @@
                           "alias": "ReviewDate",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -854,7 +864,9 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ReviewDate\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "inputFormat": "MM/DD/YYYY",
+                          "outputFormat": "MM/DD/YYYY"
                         },
                         "Comments": {
                           "allowCellWrapping": false,
@@ -976,7 +988,8 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( !CheckOutTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( !CheckOutTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_CHECKOUT.run(() => showAlert('Saved!'), () => showAlert('Something went wrong!','error'))}}"
+                          "onSave": "{{UPDATE_CHECKOUT.run(() => showAlert('Saved!'), () => showAlert('Something went wrong!','error'))}}",
+                          "fontStyle": ""
                         }
                       },
                       "key": "bpzxwnwf14",

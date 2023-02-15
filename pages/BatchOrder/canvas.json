@@ -58,7 +58,7 @@
                   "widgetName": "Canvas113Copy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -77,7 +77,7 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "TitleHeader",
+                      "widgetName": "SubTitleHeader",
                       "dynamicPropertyPathList": [
                         {
                           "key": "fontSize"
@@ -85,8 +85,8 @@
                       ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 10,
+                      "bottomRow": 14,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -99,10 +99,59 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
+                        },
+                        {
+                          "key": "textColor"
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Batch | Scientist : {{appsmith.URL.queryParams.Scientist\n}}",
+                      "text": "Dispatcher : {{appsmith.URL.queryParams.Dispatcher\n}} | Scientist : {{appsmith.URL.queryParams.Scientist\n}}",
+                      "key": "czyq0gtp0e",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 59,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "sczx89ojpd",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+                      "version": 1,
+                      "parentId": "7oesvtjle1",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.8rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "TitleHeader",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 16.62109375,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "Inter",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "textColor"
+                        }
+                      ],
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Batch Details ",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 59,
@@ -111,14 +160,14 @@
                       "widgetId": "aso411sgtd",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "#FFFFFF",
+                      "textColor": "{{appsmith.theme.colors.backgroundColor}}",
                       "version": 1,
                       "parentId": "7oesvtjle1",
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
                       "maxDynamicHeight": 9000,
-                      "fontSize": "1.8rem",
+                      "fontSize": "2.5rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -130,8 +179,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 10,
-                      "bottomRow": 14,
+                      "topRow": 14,
+                      "bottomRow": 18,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -415,6 +464,7 @@
                       ],
                       "leftColumn": 0,
                       "delimiter": ",",
+                      "variant": "VARIANT3",
                       "defaultSelectedRowIndex": 0,
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -481,26 +531,32 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn2.onClick"
                         }
                       ],
+                      "compactMode": "TALL",
                       "displayName": "Table",
                       "bottomRow": 54,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
                         "status": 75,
-                        "Target": 76,
-                        "PlateMap": 111,
-                        "Location": 108,
-                        "Scientist": 123,
-                        "Project": 131,
-                        "IsPhysicallyReceived": 189,
-                        "ReceivedDate": 150,
-                        "CDDImportFileName": 262,
-                        "IsInitialCheckedOut": 188,
-                        "CDDRegisteredDate": 197,
-                        "IsCDDRegistered": 193,
-                        "customColumn2": 212
+                        "Target": 99,
+                        "PlateMap": 123,
+                        "Location": 126,
+                        "Scientist": 136,
+                        "Project": 149,
+                        "IsPhysicallyReceived": 196,
+                        "ReceivedDate": 183,
+                        "CDDImportFileName": 241,
+                        "IsInitialCheckedOut": 205,
+                        "CDDRegisteredDate": 218,
+                        "IsCDDRegistered": 214,
+                        "customColumn2": 254,
+                        "EditActions1": 223,
+                        "customColumn1": 219
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -1009,12 +1065,12 @@
                           "validation": {},
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF",
-                          "buttonColor": "#3b82f6",
+                          "buttonColor": "#1e3a8a",
                           "borderRadius": "0.375rem",
                           "boxShadow": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "Add/View Compounds",
-                          "onClick": "{{navigateTo('AllCompounds',{BatchId: OpenBatchTable.selectedRow.BatchId}, 'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('AllCompounds',{BatchId: OpenBatchTable.selectedRow.BatchId,\t\t\t\t\t\t\t\t\t\"Target\" : OpenBatchTable.selectedRow.Target,\"Scientist\" : OpenBatchTable.selectedRow.Scientist}, 'SAME_WINDOW')}}"
                         }
                       },
                       "key": "j1q6i3sr5l",
@@ -2123,6 +2179,18 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "BatchOrder_FETCH_BATCH",
+              "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.OrderId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "BatchOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
@@ -2144,18 +2212,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "BatchOrder_FETCH_BATCH",
-              "name": "FETCH_BATCH",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.OrderId"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

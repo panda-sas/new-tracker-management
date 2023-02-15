@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1240,
+          "bottomRow": 940,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -26,13 +26,14 @@
           "leftColumn": 0,
           "children": [
             {
-              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
               "widgetName": "Directory_tabs",
+              "borderColor": "rgba(0, 0, 0, 0.06)",
               "isCanvas": true,
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
-              "topRow": 26,
-              "bottomRow": 116,
+              "topRow": 24,
+              "bottomRow": 86,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -53,7 +54,7 @@
                   "key": "borderRadius"
                 },
                 {
-                  "key": "boxShadow"
+                  "key": "backgroundColor"
                 }
               ],
               "children": [
@@ -63,13 +64,13 @@
                   "widgetName": "Canvas111",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 870,
+                  "bottomRow": 570,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 870,
+                  "minHeight": 570,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -214,9 +215,12 @@
                         },
                         {
                           "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
                         }
                       ],
-                      "compactMode": "DEFAULT",
+                      "compactMode": "TALL",
                       "displayName": "Table",
                       "bottomRow": 53,
                       "columnWidthMap": {
@@ -226,14 +230,15 @@
                         "photo": 122,
                         "cname": 202,
                         "OrderId": 157.25,
-                        "Scientist": 110,
-                        "Dispatcher": 117,
-                        "ShipmentDate": 150,
-                        "TrackingID": 126,
+                        "Scientist": 181,
+                        "Dispatcher": 184,
+                        "ShipmentDate": 203,
+                        "TrackingID": 174,
                         "Form": 99,
-                        "NoOfShipments": 170,
-                        "isComplete": 129,
-                        "customColumn1": 147
+                        "NoOfShipments": 239,
+                        "isComplete": 151,
+                        "customColumn1": 221,
+                        "EditActions1": 213
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -435,7 +440,7 @@
                           "originalId": "isComplete",
                           "id": "isComplete",
                           "alias": "isComplete",
-                          "horizontalAlignment": "CENTER",
+                          "horizontalAlignment": "LEFT",
                           "verticalAlignment": "TOP",
                           "columnType": "switch",
                           "textColor": "",
@@ -517,7 +522,9 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{ORDER_UPDATE.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                          "onSave": "{{ORDER_UPDATE.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}",
+                          "textSize": "0.875rem",
+                          "horizontalAlignment": "LEFT"
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
@@ -551,7 +558,7 @@
                           "boxShadow": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "Add/View Batch",
-                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId, \"Scientist\" : OpenOrdersTable.selectedRow.Scientist}, 'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId, \"Scientist\" : OpenOrdersTable.selectedRow.Scientist, \"Dispatcher\": OpenOrdersTable.selectedRow.Dispatcher}, 'SAME_WINDOW')}}"
                         }
                       },
                       "borderWidth": "\n0.5",
@@ -640,12 +647,12 @@
                   "widgetName": "Canvas115",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 890,
+                  "bottomRow": 570,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 900,
+                  "minHeight": 570,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -1157,9 +1164,11 @@
                   "isLoading": false
                 }
               ],
+              "borderWidth": "0.4",
               "key": "fqdezz8vpn",
               "isDeprecated": false,
               "rightColumn": 64,
+              "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
               "dynamicHeight": "FIXED",
               "widgetId": "22ker1dkts",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1189,7 +1198,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "minDynamicHeight": 4
+              "minDynamicHeight": 10
             },
             {
               "boxShadow": "none",
