@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 940,
+          "bottomRow": 1020,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -1060,7 +1060,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
@@ -1071,24 +1071,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
-                      "placeholderText": "Select option",
+                      "options": "{{FETCH_PROJECTS.data.map(d => (\n\t{\n\t\t\"label\" :d.ProjectName,\n\t\t\"value\": d.ProjectName\n\t}\n)\n)}}",
+                      "placeholderText": "Select project",
                       "isDisabled": false,
                       "key": "t6n8s8hevs",
                       "labelTextSize": "0.875rem",
@@ -1136,24 +1126,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
-                      "placeholderText": "Select option",
+                      "options": "{{FETCH_SCIENTISTS.data.map(d => (\n\t{\n\t\t\"label\" :d.ScientistName,\n\t\t\"value\": d.ScientistName\n\t}\n)\n)}}",
+                      "placeholderText": "Select scientist name",
                       "isDisabled": false,
                       "key": "t6n8s8hevs",
                       "labelTextSize": "0.875rem",
@@ -1362,7 +1342,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
@@ -1373,24 +1353,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
-                      "placeholderText": "Select option",
+                      "options": "{{FETCH_TARGETS.data.map(d => (\n\t{\n\t\t\"label\" :d.TargetName,\n\t\t\"value\": d.TargetName\n\t}\n)\n)}}",
+                      "placeholderText": "Select target",
                       "isDisabled": false,
                       "key": "t6n8s8hevs",
                       "labelTextSize": "0.875rem",
@@ -1531,6 +1501,62 @@
               "maxDynamicHeight": 9000,
               "width": 456,
               "minDynamicHeight": 24
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Select1",
+              "isFilterable": true,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+              "labelText": "Label",
+              "searchTags": [
+                "dropdown"
+              ],
+              "topRow": 87,
+              "bottomRow": 94,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{{\n            {\n              label: Select1.options[0].label,\n              value: Select1.options[0].value\n            }\n          }}",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "defaultOptionValue"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "leftColumn": 0,
+              "labelPosition": "Top",
+              "options": "{{FETCH_PROJECTS.data.map( (obj) =>{ return  {'label': obj.ProjectName, 'value': obj.Scientist } })}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "i2kb20kr25",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 20,
+              "dynamicHeight": "FIXED",
+              "widgetId": "sos8333be5",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
             }
           ]
         },
@@ -1539,6 +1565,32 @@
             {
               "id": "EachOrder_FETCH_BATCH",
               "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "EachOrder_FETCH_PROJECTS",
+              "name": "FETCH_PROJECTS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "EachOrder_FETCH_SCIENTISTS",
+              "name": "FETCH_SCIENTISTS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "EachOrder_FETCH_TARGETS",
+              "name": "FETCH_TARGETS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
