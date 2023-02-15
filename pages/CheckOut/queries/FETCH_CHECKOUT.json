@@ -33,7 +33,12 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "Scientist",
+            "CheckoutDate",
+            "TentativeReturnDate",
+            "Purpose"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"

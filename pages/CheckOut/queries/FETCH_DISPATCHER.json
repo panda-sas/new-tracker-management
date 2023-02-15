@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "SELECT_OPEN_ORDERS",
+    "name": "FETCH_DISPATCHER",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllOrders",
+    "pageId": "CheckOut",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -33,15 +33,7 @@
           }
         },
         "projection": {
-          "data": [
-            "Scientist",
-            "Dispatcher",
-            "ShipmentDate",
-            "TrackingID",
-            "NoOfShipments",
-            "isComplete",
-            "OrderId"
-          ]
+          "data": []
         },
         "queryFormat": {
           "data": "ROWS"
@@ -50,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "Order"
+          "data": "Checkout"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -74,16 +66,14 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "EQ",
-                "key": "isComplete",
-                "value": "FALSE"
+                "condition": "LT"
               }
             ]
           }
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -94,7 +84,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllOrders_SELECT_OPEN_ORDERS",
+  "id": "CheckOut_FETCH_DISPATCHER",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ebe696c06b5b5299c31cb3"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed3c748e503f7636518d1b"
 }

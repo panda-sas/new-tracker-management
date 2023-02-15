@@ -686,34 +686,7 @@
                           "key": "primaryColumns.Dispatcher.computedValue"
                         },
                         {
-                          "key": "primaryColumns.ShipmentDate.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.TrackingID.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.NoOfShipments.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.isComplete.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.rowIndex.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveButtonColor"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.discardBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         },
                         {
                           "key": "primaryColumns.Scientist.selectOptions"
@@ -773,23 +746,12 @@
                         "Scientist",
                         "Dispatcher",
                         "OrderId",
-                        "ShipmentDate",
-                        "TrackingID",
-                        "isComplete",
                         "customColumn1",
-                        "NoOfShipments",
-                        "EditActions1",
                         "rowIndex"
                       ],
                       "dynamicPropertyPathList": [
                         {
                           "key": "onRowSelected"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         }
                       ],
                       "compactMode": "DEFAULT",
@@ -819,9 +781,6 @@
                         },
                         {
                           "key": "onRowSelected"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.onSave"
                         },
                         {
                           "key": "primaryColumns.Scientist.onSubmit"
@@ -906,128 +865,14 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Dispatcher",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Dispatcher\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "ShipmentDate": {
-                          "allowCellWrapping": false,
-                          "index": 3,
-                          "width": 150,
-                          "originalId": "ShipmentDate",
-                          "id": "ShipmentDate",
-                          "alias": "ShipmentDate",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "date",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": false,
-                          "isDerived": false,
-                          "label": "Shipment Date",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ShipmentDate\"]))}}",
-                          "validation": {},
-                          "cellBackground": "",
-                          "inputFormat": "MM/DD/YYYY",
-                          "outputFormat": "MM/DD/YYYY"
-                        },
-                        "TrackingID": {
-                          "allowCellWrapping": false,
-                          "index": 4,
-                          "width": 150,
-                          "originalId": "TrackingID",
-                          "id": "TrackingID",
-                          "alias": "TrackingID",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": false,
-                          "isDerived": false,
-                          "label": "Tracking ID",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TrackingID\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "NoOfShipments": {
-                          "allowCellWrapping": false,
-                          "index": 6,
-                          "width": 150,
-                          "originalId": "NoOfShipments",
-                          "id": "NoOfShipments",
-                          "alias": "NoOfShipments",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": false,
-                          "isDerived": false,
-                          "label": "Expected Shipments",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NoOfShipments\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "isComplete": {
-                          "allowCellWrapping": false,
-                          "index": 7,
-                          "width": 150,
-                          "originalId": "isComplete",
-                          "id": "isComplete",
-                          "alias": "isComplete",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "TOP",
-                          "columnType": "switch",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": false,
-                          "isDerived": false,
-                          "label": "is Complete",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"isComplete\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -1058,41 +903,6 @@
                           "computedValue": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                           "validation": {},
                           "cellBackground": ""
-                        },
-                        "EditActions1": {
-                          "allowCellWrapping": false,
-                          "index": 9,
-                          "width": 150,
-                          "originalId": "EditActions1",
-                          "id": "EditActions1",
-                          "alias": "EditActions1",
-                          "columnType": "editActions",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": false,
-                          "isDerived": true,
-                          "label": "Save / Discard",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "saveIconAlign": "left",
-                          "discardIconAlign": "left",
-                          "saveActionLabel": "Save",
-                          "discardActionLabel": "Discard",
-                          "saveButtonColor": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "discardButtonColor": "#F22B2B",
-                          "saveBorderRadius": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardBorderRadius": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardButtonVariant": "TERTIARY",
-                          "isSaveDisabled": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "isDiscardDisabled": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{ORDER_UPDATE.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
