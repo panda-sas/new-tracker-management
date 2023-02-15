@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "INSERT_COMPOUND",
+    "name": "UPDATE_CHECKOUT",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllCompounds",
+    "pageId": "CheckOut",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "INSERT_ONE"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -42,10 +42,10 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\t\n\t\"BatchId\" : {{appsmith.URL.queryParams.BatchId}},\n\t\"CompoundId\": {{Generator.getUUID()}},\n\t\"SACCId\": \"SAC-1023435\",\n\t\"Concentration\": \"23\",\n\t\"InitialAmount\": \"200\",\n\t\"CurrentAmountLeft\": \"400\"\n}"
+          "data": "{{\n{...CheckOutTable.selectedRow }\n}}"
         },
         "sheetName": {
-          "data": "Compound"
+          "data": "Checkout"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -73,15 +73,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Generator.getUUID()",
-      "appsmith.URL.queryParams.BatchId"
+      "\n{...CheckOutTable.selectedRow }\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllCompounds_INSERT_COMPOUND",
+  "id": "CheckOut_UPDATE_CHECKOUT",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46fc8e503f763651769f"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed0c353d6355314506073b"
 }

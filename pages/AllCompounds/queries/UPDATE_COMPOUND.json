@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "INSERT_COMPOUND",
+    "name": "UPDATE_COMPOUND",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "INSERT_ONE"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\t\n\t\"BatchId\" : {{appsmith.URL.queryParams.BatchId}},\n\t\"CompoundId\": {{Generator.getUUID()}},\n\t\"SACCId\": \"SAC-1023435\",\n\t\"Concentration\": \"23\",\n\t\"InitialAmount\": \"200\",\n\t\"CurrentAmountLeft\": \"400\"\n}"
+          "data": "{{\n{...AllCompoundsTable.selectedRow}\n}}"
         },
         "sheetName": {
           "data": "Compound"
@@ -73,15 +73,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Generator.getUUID()",
-      "appsmith.URL.queryParams.BatchId"
+      "\n{...AllCompoundsTable.selectedRow}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllCompounds_INSERT_COMPOUND",
+  "id": "AllCompounds_UPDATE_COMPOUND",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46fc8e503f763651769f"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ecf9eec06b5b5299c331ef"
 }

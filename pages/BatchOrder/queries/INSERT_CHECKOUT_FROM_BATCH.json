@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "INSERT_COMPOUND",
+    "name": "INSERT_CHECKOUT_FROM_BATCH",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllCompounds",
+    "pageId": "BatchOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,10 +42,10 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\t\n\t\"BatchId\" : {{appsmith.URL.queryParams.BatchId}},\n\t\"CompoundId\": {{Generator.getUUID()}},\n\t\"SACCId\": \"SAC-1023435\",\n\t\"Concentration\": \"23\",\n\t\"InitialAmount\": \"200\",\n\t\"CurrentAmountLeft\": \"400\"\n}"
+          "data": "{\t\n\t\"BatchId\" : {{OpenBatchTable.selectedRow.BatchId}},\n\t\"CheckOutId\": {{Generator.getUUID()}},\n\t\"Scientist\": {{SelectScientistDropDown.selectedOptionValue}},\n\t\"CheckoutDate\": {{CheckOutDate.formattedDate}},\n\t\"TentativeReturnDate\": {{TentativeReturnDate.formattedDate}},\n\t\"Purpose\": {{PurposeInputText.inputText}},\n\t\"IsReturned\": {{false}},\n\t\"IsResultedUploadedToCDD\": {{false}},\n\t\"IsReviewed\": {{false}},\n\t\"IsPlateCreated\": {{false}}\n}"
         },
         "sheetName": {
-          "data": "Compound"
+          "data": "Checkout"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -73,15 +73,20 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "CheckOutDate.formattedDate",
       "Generator.getUUID()",
-      "appsmith.URL.queryParams.BatchId"
+      "OpenBatchTable.selectedRow.BatchId",
+      "PurposeInputText.inputText",
+      "SelectScientistDropDown.selectedOptionValue",
+      "TentativeReturnDate.formattedDate",
+      "false"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllCompounds_INSERT_COMPOUND",
+  "id": "BatchOrder_INSERT_CHECKOUT_FROM_BATCH",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46fc8e503f763651769f"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed1c6b8e503f76365189f2"
 }

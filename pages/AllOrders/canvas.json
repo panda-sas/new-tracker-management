@@ -225,14 +225,15 @@
                         "status": 75,
                         "photo": 122,
                         "cname": 202,
-                        "OrderId": 251,
+                        "OrderId": 157.25,
                         "Scientist": 110,
                         "Dispatcher": 117,
                         "ShipmentDate": 150,
-                        "TrackingID": 160,
+                        "TrackingID": 126,
                         "Form": 99,
-                        "NoOfShipments": 180,
-                        "isComplete": 157
+                        "NoOfShipments": 170,
+                        "isComplete": 129,
+                        "customColumn1": 147
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -256,7 +257,7 @@
                       ],
                       "primaryColumns": {
                         "OrderId": {
-                          "allowCellWrapping": false,
+                          "allowCellWrapping": true,
                           "index": 0,
                           "width": 150,
                           "originalId": "OrderId",

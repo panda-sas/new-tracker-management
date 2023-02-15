@@ -73,7 +73,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "AddCompoundsButton",
-                      "onClick": "{{showModal('AddNewBatchModal')}}",
+                      "onClick": "{{showModal('AddCompoundsModal')}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -119,33 +119,12 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 5,
+                      "topRow": 6,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
                       "animateLoading": true,
                       "dynamicBindingPathList": [
-                        {
-                          "key": "primaryColumns.step.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.task.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.status.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.buttonColor"
-                        },
-                        {
-                          "key": "primaryColumns.action.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.action.boxShadow"
-                        },
                         {
                           "key": "accentColor"
                         },
@@ -154,11 +133,48 @@
                         },
                         {
                           "key": "boxShadow"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.saveBorderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.discardBorderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isSaveDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.CompoundId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.BatchId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.SACCId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Concentration.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.InitialAmount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.CurrentAmountLeft.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.rowIndex.computedValue"
                         }
                       ],
                       "leftColumn": 0,
                       "delimiter": ",",
                       "defaultSelectedRowIndex": 0,
+                      "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": true,
                       "isVisible": true,
@@ -196,139 +212,287 @@
                       "widgetName": "AllCompoundsTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "step",
-                        "task",
-                        "status",
-                        "action"
+                        "CompoundId",
+                        "BatchId",
+                        "SACCId",
+                        "Concentration",
+                        "InitialAmount",
+                        "CurrentAmountLeft",
+                        "EditActions1",
+                        "rowIndex"
                       ],
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "primaryColumns.EditActions1.isSaveDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                        }
+                      ],
                       "displayName": "Table",
-                      "bottomRow": 33,
+                      "bottomRow": 34,
                       "columnWidthMap": {
-                        "task": 245,
-                        "step": 62,
-                        "status": 75
+                        "task": 158,
+                        "step": 180,
+                        "status": 181,
+                        "action": 265,
+                        "CurrentAmountLeft": 183
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 19.75,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "primaryColumns.EditActions1.onSave"
+                        },
+                        {
+                          "key": "primaryColumns.Concentration.onSubmit"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "step": {
+                        "EditActions1": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "EditActions1",
+                          "id": "EditActions1",
+                          "alias": "EditActions1",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "editActions",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Save / Discard",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "saveIconAlign": "left",
+                          "discardIconAlign": "left",
+                          "saveActionLabel": "Save",
+                          "discardActionLabel": "Discard",
+                          "saveButtonColor": "#1e3a8a",
+                          "discardButtonColor": "#F22B2B",
+                          "saveBorderRadius": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "discardBorderRadius": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "discardButtonVariant": "TERTIARY",
+                          "isSaveDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
+                          "isDiscardDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
+                          "onSave": "{{UPDATE_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                        },
+                        "CompoundId": {
+                          "allowCellWrapping": false,
                           "index": 0,
                           "width": 150,
-                          "id": "step",
-                          "originalId": "step",
-                          "alias": "step",
+                          "originalId": "CompoundId",
+                          "id": "CompoundId",
+                          "alias": "CompoundId",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": false,
                           "isDerived": false,
-                          "label": "step",
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
+                          "label": "CompoundId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CompoundId\"]))}}",
                           "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "cellBackground": ""
                         },
-                        "task": {
+                        "BatchId": {
+                          "allowCellWrapping": false,
                           "index": 1,
                           "width": 150,
-                          "id": "task",
-                          "originalId": "task",
-                          "alias": "task",
+                          "originalId": "BatchId",
+                          "id": "BatchId",
+                          "alias": "BatchId",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": false,
                           "isDerived": false,
-                          "label": "task",
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
+                          "label": "BatchId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
                           "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "cellBackground": ""
                         },
-                        "status": {
+                        "SACCId": {
+                          "allowCellWrapping": false,
                           "index": 2,
                           "width": 150,
-                          "id": "status",
-                          "originalId": "status",
-                          "alias": "status",
+                          "originalId": "SACCId",
+                          "id": "SACCId",
+                          "alias": "SACCId",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "status",
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+                          "label": "SAC ID",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SACCId\"]))}}",
                           "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "cellBackground": ""
                         },
-                        "action": {
+                        "Concentration": {
+                          "allowCellWrapping": false,
                           "index": 3,
                           "width": 150,
-                          "id": "action",
-                          "originalId": "action",
-                          "alias": "action",
+                          "originalId": "Concentration",
+                          "id": "Concentration",
+                          "alias": "Concentration",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "button",
+                          "columnType": "number",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
                           "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "action",
-                          "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
+                          "label": "Concentration",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Concentration\"]))}}",
                           "validation": {},
-                          "labelColor": "#FFFFFF",
-                          "buttonColor": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                          "cellBackground": "",
+                          "onSubmit": ""
+                        },
+                        "InitialAmount": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "InitialAmount",
+                          "id": "InitialAmount",
+                          "alias": "InitialAmount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Initial Amount",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"InitialAmount\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "CurrentAmountLeft": {
+                          "allowCellWrapping": false,
+                          "index": 5,
+                          "width": 150,
+                          "originalId": "CurrentAmountLeft",
+                          "id": "CurrentAmountLeft",
+                          "alias": "CurrentAmountLeft",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Current Amount Left",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CurrentAmountLeft\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "rowIndex": {
+                          "allowCellWrapping": false,
+                          "index": 6,
+                          "width": 150,
+                          "originalId": "rowIndex",
+                          "id": "rowIndex",
+                          "alias": "rowIndex",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "rowIndex",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "pa1raiidba",
                       "isDeprecated": false,
-                      "rightColumn": 64,
+                      "rightColumn": 63,
                       "textSize": "0.875rem",
                       "widgetId": "mr7jwm0gdt",
-                      "tableData": [
-                        {
-                          "step": "#1",
-                          "task": "Drop a table",
-                          "status": "✅",
-                          "action": ""
-                        },
-                        {
-                          "step": "#2",
-                          "task": "Create a query fetch_users with the Mock DB",
-                          "status": "--",
-                          "action": ""
-                        },
-                        {
-                          "step": "#3",
-                          "task": "Bind the query using => fetch_users.data",
-                          "status": "--",
-                          "action": ""
-                        }
-                      ],
+                      "tableData": "{{FETCH_COMPOUNDS.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "4rpokbu2bf",
@@ -661,7 +825,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "widgetName": "Text2Copy",
+                      "widgetName": "SubTextFormatCSV",
                       "dynamicPropertyPathList": [
                         {
                           "key": "fontSize"
@@ -719,7 +883,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "AddIcon",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "onClick": "{{closeModal('AddCompoundsModal')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -732,6 +896,11 @@
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 58,
                       "dynamicBindingPathList": [
                         {
@@ -757,7 +926,7 @@
                       "buttonVariant": "TERTIARY"
                     },
                     {
-                      "widgetName": "Text1",
+                      "widgetName": "TitleHeader",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                       "searchTags": [
@@ -809,8 +978,8 @@
                     {
                       "resetFormOnClick": false,
                       "boxShadow": "none",
-                      "widgetName": "Button1",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "widgetName": "CloseButton",
+                      "onClick": "{{closeModal('AddCompoundsModal')}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -823,7 +992,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 28,
                       "dynamicBindingPathList": [
                         {
@@ -854,7 +1027,8 @@
                     {
                       "resetFormOnClick": false,
                       "boxShadow": "none",
-                      "widgetName": "Button2",
+                      "widgetName": "SubmitButton",
+                      "onClick": "{{INSERT_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -867,14 +1041,18 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 45,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Confirm",
+                      "text": "Submit",
                       "isDisabled": false,
                       "key": "e731fw22j5",
                       "isDeprecated": false,
@@ -893,11 +1071,12 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "originalBottomRow": 22,
                       "buttonVariant": "PRIMARY",
+                      "iconAlign": "left",
                       "placement": "CENTER"
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "FilePicker1",
+                      "widgetName": "UploadCSVFilePicker",
                       "buttonColor": "#1e3a8a",
                       "displayName": "FilePicker",
                       "iconSVG": "/static/media/icon.7c5ad9c357928c6ff5701bf51a56c2e5.svg",
@@ -941,7 +1120,7 @@
                       "maxNumFiles": 1
                     },
                     {
-                      "widgetName": "Text2",
+                      "widgetName": "AddText",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                       "searchTags": [
@@ -1028,7 +1207,18 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "AllCompounds_FETCH_COMPOUNDS",
+              "name": "FETCH_COMPOUNDS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "AllCompounds",

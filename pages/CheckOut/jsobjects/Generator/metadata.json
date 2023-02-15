@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Generator",
+    "pageId": "CheckOut",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CheckOut_Generator",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed046b3d635531450606b5"
+}
