@@ -102,10 +102,10 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Batch of Order {{appsmith.URL.queryParams.OrderId\n}}",
+                      "text": "Batch | Scientist : {{appsmith.URL.queryParams.Scientist\n}}",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 43,
+                      "rightColumn": 59,
                       "textAlign": "LEFT",
                       "dynamicHeight": "FIXED",
                       "widgetId": "aso411sgtd",
@@ -144,11 +144,14 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Detailed information about the selected order",
+                      "text": "Order Id {{appsmith.URL.queryParams.OrderId\n}}",
                       "key": "nf5ngvo9vw",
                       "isDeprecated": false,
                       "rightColumn": 36,
@@ -1664,9 +1667,13 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "SubmitCheckoutButton",
-                      "onClick": "{{INSERT_CHECKOUT_FROM_BATCH.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}",
+                      "onClick": "{{INSERT_CHECKOUT_FROM_BATCH.run(() => {\n\tshowAlert('Saved!','success')\n\tnavigateTo('CheckOut')}, () => showAlert('Something went wrong!','error'))}}",
                       "buttonColor": "#1e3a8a",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -2116,18 +2123,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "BatchOrder_FETCH_BATCH",
-              "name": "FETCH_BATCH",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.OrderId"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "BatchOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
@@ -2149,6 +2144,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "BatchOrder_FETCH_BATCH",
+              "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.OrderId"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

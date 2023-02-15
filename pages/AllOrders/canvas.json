@@ -551,7 +551,7 @@
                           "boxShadow": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "Add/View Batch",
-                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId, \"Scientist\" : OpenOrdersTable.selectedRow.Scientist}, 'SAME_WINDOW')}}"
                         }
                       },
                       "borderWidth": "\n0.5",
