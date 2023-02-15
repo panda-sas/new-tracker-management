@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1020,
+          "bottomRow": 940,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -935,6 +935,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "AddNewBatchButton",
+                      "onClick": "{{showModal('AddNewBatchModal')}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -950,7 +951,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 19.75,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -1156,7 +1161,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "CloseButton",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "onClick": "{{closeModal('AddNewBatchModal')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -1169,6 +1174,11 @@
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 58,
                       "dynamicBindingPathList": [
                         {
@@ -1244,7 +1254,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "CancelButton",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "onClick": "{{closeModal('AddNewBatchModal')}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1257,7 +1267,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 31,
                       "dynamicBindingPathList": [
                         {
@@ -1287,6 +1301,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "SubmitButton",
+                      "onClick": "{{INSERT_BATCH.run(() => showAlert('Submitted!','success'), () => showAlert('Something went wrong!','error'))}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1299,7 +1314,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
@@ -1382,7 +1401,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "FilePicker1",
+                      "widgetName": "PlateMapFilePicker",
                       "buttonColor": "#e4e4e7",
                       "displayName": "FilePicker",
                       "iconSVG": "/static/media/icon.7c5ad9c357928c6ff5701bf51a56c2e5.svg",
@@ -1422,7 +1441,7 @@
                       "maxNumFiles": 1
                     },
                     {
-                      "widgetName": "Text1",
+                      "widgetName": "PlateMapText",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                       "searchTags": [
@@ -1454,7 +1473,7 @@
                       "text": "Plate Map",
                       "key": "kcxf30ixa9",
                       "isDeprecated": false,
-                      "rightColumn": 16,
+                      "rightColumn": 13,
                       "textAlign": "LEFT",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "xrnikxu08b",
@@ -1501,62 +1520,6 @@
               "maxDynamicHeight": 9000,
               "width": 456,
               "minDynamicHeight": 24
-            },
-            {
-              "boxShadow": "none",
-              "widgetName": "Select1",
-              "isFilterable": true,
-              "displayName": "Select",
-              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-              "labelText": "Label",
-              "searchTags": [
-                "dropdown"
-              ],
-              "topRow": 87,
-              "bottomRow": 94,
-              "parentRowSpace": 10,
-              "labelWidth": 5,
-              "type": "SELECT_WIDGET",
-              "serverSideFiltering": false,
-              "hideCard": false,
-              "defaultOptionValue": "{{\n            {\n              label: Select1.options[0].label,\n              value: Select1.options[0].value\n            }\n          }}",
-              "animateLoading": true,
-              "dynamicBindingPathList": [
-                {
-                  "key": "options"
-                },
-                {
-                  "key": "defaultOptionValue"
-                },
-                {
-                  "key": "accentColor"
-                },
-                {
-                  "key": "borderRadius"
-                }
-              ],
-              "leftColumn": 0,
-              "labelPosition": "Top",
-              "options": "{{FETCH_PROJECTS.data.map( (obj) =>{ return  {'label': obj.ProjectName, 'value': obj.Scientist } })}}",
-              "placeholderText": "Select option",
-              "isDisabled": false,
-              "key": "i2kb20kr25",
-              "labelTextSize": "0.875rem",
-              "isRequired": false,
-              "isDeprecated": false,
-              "rightColumn": 20,
-              "dynamicHeight": "FIXED",
-              "widgetId": "sos8333be5",
-              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "isVisible": true,
-              "version": 1,
-              "parentId": "0",
-              "labelAlignment": "left",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "maxDynamicHeight": 9000,
-              "minDynamicHeight": 4
             }
           ]
         },

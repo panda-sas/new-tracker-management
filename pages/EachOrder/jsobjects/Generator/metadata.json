@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Generator",
+    "pageId": "EachOrder",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "EachOrder_Generator",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec2ee1c06b5b5299c31fa1"
+}
