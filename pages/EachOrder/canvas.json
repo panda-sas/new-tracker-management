@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 940,
+          "bottomRow": 990,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -291,7 +291,7 @@
                 "group"
               ],
               "topRow": 22,
-              "bottomRow": 86,
+              "bottomRow": 91,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -313,12 +313,12 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 710,
+                  "bottomRow": 680,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 640,
+                  "minHeight": 690,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -328,7 +328,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 6,
+                      "topRow": 4,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -467,7 +467,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 69,
+                      "bottomRow": 53,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -487,7 +487,11 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 19.75,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "primaryColumns.EditActions1.onSave"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "BatchId": {
@@ -603,7 +607,7 @@
                           "cellBackground": ""
                         },
                         "Location": {
-                          "allowCellWrapping": false,
+                          "allowCellWrapping": true,
                           "index": 4,
                           "width": 150,
                           "originalId": "Location",
@@ -918,7 +922,8 @@
                           "discardBorderRadius": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}"
+                          "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
+                          "onSave": "{{UPDATE_BATCH.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
                         }
                       },
                       "key": "j1q6i3sr5l",
