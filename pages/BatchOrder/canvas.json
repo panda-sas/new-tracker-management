@@ -399,6 +399,12 @@
                         },
                         {
                           "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.boxShadow"
                         }
                       ],
                       "leftColumn": 0,
@@ -456,7 +462,8 @@
                         "CDDImportFileName",
                         "IsInitialCheckedOut",
                         "rowIndex",
-                        "EditActions1"
+                        "EditActions1",
+                        "customColumn1"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -924,6 +931,39 @@
                           "isSaveDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
                           "onSave": "{{UPDATE_BATCH.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                        },
+                        "customColumn1": {
+                          "allowCellWrapping": false,
+                          "index": 10,
+                          "width": 150,
+                          "originalId": "customColumn1",
+                          "id": "customColumn1",
+                          "alias": "Action",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "button",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Action",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "#16a34a",
+                          "borderRadius": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+                          "customAlias": "",
+                          "buttonLabel": "Check Out",
+                          "buttonVariant": "PRIMARY"
                         }
                       },
                       "key": "j1q6i3sr5l",
@@ -1535,6 +1575,18 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "BatchOrder_FETCH_BATCH",
+              "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.OrderId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "BatchOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
@@ -1556,18 +1608,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "BatchOrder_FETCH_BATCH",
-              "name": "FETCH_BATCH",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.OrderId"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]
