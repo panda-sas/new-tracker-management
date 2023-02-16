@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  FETCH_BATCH_DETAILS.run().then(rows => {\n    TargetInputText.text = rows[0]['Target'];\n    LocationTextValue.text = rows[0]['Location'];\n    ProjectTextValue.text = rows[0]['Project'];\n    FETCH_ORDERS.run({\n      orderId: rows[0]['OrderId']\n    }).then(rows => {\n      DispatcherTextValue.text = rows[0]['Dispatcher'];\n    });\n  });\n}",
+      "body": "async () => {\n  await FETCH_BATCH_DETAILS.run();\n  let batchData = FETCH_BATCH_DETAILS.data[0];\n  await FETCH_ORDERS.run({\n    orderId: batchData['OrderId']\n  });\n  let orderData = FETCH_ORDERS.data[0];\n  TargetInputText.text = batchData['Target'];\n  LocationTextValue.text = batchData['Location'];\n  ProjectTextValue.text = batchData['Project'];\n  DispatcherTextValue.text = orderData['Dispatcher'];\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  FETCH_BATCH_DETAILS.run().then(rows => {\n    TargetInputText.text = rows[0]['Target'];\n    LocationTextValue.text = rows[0]['Location'];\n    ProjectTextValue.text = rows[0]['Project'];\n    FETCH_ORDERS.run({\n      orderId: rows[0]['OrderId']\n    }).then(rows => {\n      DispatcherTextValue.text = rows[0]['Dispatcher'];\n    });\n  });\n}"
+      "async () => {\n  await FETCH_BATCH_DETAILS.run();\n  let batchData = FETCH_BATCH_DETAILS.data[0];\n  await FETCH_ORDERS.run({\n    orderId: batchData['OrderId']\n  });\n  let orderData = FETCH_ORDERS.data[0];\n  TargetInputText.text = batchData['Target'];\n  LocationTextValue.text = batchData['Location'];\n  ProjectTextValue.text = batchData['Project'];\n  DispatcherTextValue.text = orderData['Dispatcher'];\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

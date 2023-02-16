@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Generator",
+    "pageId": "AllCompoundsNoFilter",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "AllCompoundsNoFilter_Generator",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed98a9c06b5b5299c33c6e"
+}

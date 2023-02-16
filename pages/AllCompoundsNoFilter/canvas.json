@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "AllCompounds",
-    "slug": "allcompounds",
+    "name": "AllCompoundsNoFilter",
+    "slug": "allcompoundsnofilter",
     "layouts": [
       {
         "viewMode": false,
@@ -367,8 +367,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "SAC ID",
@@ -590,52 +590,6 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "SubTitleText",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 9,
-                      "bottomRow": 13,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 16.62109375,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "Inter",
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Target : {{appsmith.URL.queryParams.Target\n}} | Scientist : {{appsmith.URL.queryParams.Scientist\n}}",
-                      "key": "czyq0gtp0e",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 59,
-                      "textAlign": "LEFT",
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "wo23wdvkjl",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#fafafa",
-                      "version": 1,
-                      "parentId": "qxovz6lj5r",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "maxDynamicHeight": 9000,
-                      "fontSize": "1.8rem",
-                      "minDynamicHeight": 4
-                    },
-                    {
-                      "boxShadow": "none",
                       "widgetName": "HeaderTitleText",
                       "dynamicPropertyPathList": [
                         {
@@ -685,8 +639,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 13,
-                      "bottomRow": 17,
+                      "topRow": 8,
+                      "bottomRow": 12,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -699,14 +653,11 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Batch ID : {{appsmith.URL.queryParams.BatchId\n}} ",
+                      "text": "An entire list of compounds in SACLab",
                       "key": "nf5ngvo9vw",
                       "isDeprecated": false,
                       "rightColumn": 59,
@@ -1264,7 +1215,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "AllCompounds_FETCH_COMPOUNDS",
+              "id": "AllCompoundsNoFilter_FETCH_COMPOUNDS",
               "name": "FETCH_COMPOUNDS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -1275,7 +1226,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "AllCompounds",
+        "id": "AllCompoundsNoFilter",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -1286,5 +1237,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46038e503f763651768b"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed98a9c06b5b5299c33c64"
 }

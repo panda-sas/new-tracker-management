@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Generator",
+    "pageId": "AllBatches",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "AllBatches_Generator",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed9b148e503f7636519209"
+}
