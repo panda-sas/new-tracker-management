@@ -24,6 +24,6 @@ export default {
 		CDDUrlInputText.inputText = checkoutData['CDDResultURL']
 		CommentsInputText.inputText = checkoutData['Comments']
 		ReviewerInputSelect.selectedOptionValue = checkoutData['Reviewer']
-		ReviewDate.formattedDate = {{moment(checkoutData['ReviewDate']).}}
+		ReviewDate.formattedDate = checkoutData['ReviewDate']
 	}
 }
