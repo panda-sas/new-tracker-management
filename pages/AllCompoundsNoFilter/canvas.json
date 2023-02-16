@@ -232,7 +232,7 @@
                       ],
                       "compactMode": "TALL",
                       "displayName": "Table",
-                      "bottomRow": 45,
+                      "bottomRow": 54,
                       "columnWidthMap": {
                         "task": 158,
                         "step": 180,

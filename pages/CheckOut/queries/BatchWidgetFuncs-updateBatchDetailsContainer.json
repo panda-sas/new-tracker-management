@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await FETCH_BATCH_DETAILS.run();\n  let batchData = FETCH_BATCH_DETAILS.data[0];\n  await FETCH_ORDERS.run({\n    orderId: batchData['OrderId']\n  });\n  let orderData = FETCH_ORDERS.data[0];\n  TargetInputText.text = batchData['Target'];\n  LocationTextValue.text = batchData['Location'];\n  ProjectTextValue.text = batchData['Project'];\n  DispatcherTextValue.text = orderData['Dispatcher'];\n}",
+      "body": "async () => {\n  await FETCH_CHECKOUT.run();\n  let checkoutData = FETCH_CHECKOUT.data[0];\n  await FETCH_BATCH_DETAILS.run();\n  let batchData = FETCH_BATCH_DETAILS.data[0];\n  await FETCH_ORDERS.run({\n    orderId: batchData['OrderId']\n  });\n  let orderData = FETCH_ORDERS.data[0];\n  TargetInputText.text = batchData['Target'];\n  LocationTextValue.text = batchData['Location'];\n  ProjectTextValue.text = batchData['Project'];\n  DispatcherTextValue.text = orderData['Dispatcher'];\n  ReturnSwitch.isSwitchedOn = checkoutData['IsReturned'];\n  ResultSwitch.isSwitchedOn = checkoutData['IsResultedUploadedToCDD'];\n  ReviewedSwitch.isSwitchedOn = checkoutData['IsReviewed'];\n  PurposeInputText.inputText = checkoutData['Purpose'];\n  ReturnDate.selectedDate = checkoutData['ActualReturnDate'];\n  CDDUrlInputText.inputText = checkoutData['CDDResultURL'];\n  CommentsInputText.inputText = checkoutData['Comments'];\n  ReviewerInputSelect.selectedOptionValue = checkoutData['Reviewer'];\n  ReviewDate.selectedDate = checkoutData['ReviewDate'];\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await FETCH_BATCH_DETAILS.run();\n  let batchData = FETCH_BATCH_DETAILS.data[0];\n  await FETCH_ORDERS.run({\n    orderId: batchData['OrderId']\n  });\n  let orderData = FETCH_ORDERS.data[0];\n  TargetInputText.text = batchData['Target'];\n  LocationTextValue.text = batchData['Location'];\n  ProjectTextValue.text = batchData['Project'];\n  DispatcherTextValue.text = orderData['Dispatcher'];\n}"
+      "async () => {\n  await FETCH_CHECKOUT.run();\n  let checkoutData = FETCH_CHECKOUT.data[0];\n  await FETCH_BATCH_DETAILS.run();\n  let batchData = FETCH_BATCH_DETAILS.data[0];\n  await FETCH_ORDERS.run({\n    orderId: batchData['OrderId']\n  });\n  let orderData = FETCH_ORDERS.data[0];\n  TargetInputText.text = batchData['Target'];\n  LocationTextValue.text = batchData['Location'];\n  ProjectTextValue.text = batchData['Project'];\n  DispatcherTextValue.text = orderData['Dispatcher'];\n  ReturnSwitch.isSwitchedOn = checkoutData['IsReturned'];\n  ResultSwitch.isSwitchedOn = checkoutData['IsResultedUploadedToCDD'];\n  ReviewedSwitch.isSwitchedOn = checkoutData['IsReviewed'];\n  PurposeInputText.inputText = checkoutData['Purpose'];\n  ReturnDate.selectedDate = checkoutData['ActualReturnDate'];\n  CDDUrlInputText.inputText = checkoutData['CDDResultURL'];\n  CommentsInputText.inputText = checkoutData['Comments'];\n  ReviewerInputSelect.selectedOptionValue = checkoutData['Reviewer'];\n  ReviewDate.selectedDate = checkoutData['ReviewDate'];\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_SCIENTIST",
+    "name": "FETCH_TABLE_CHECKOUT",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -33,7 +33,13 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "Scientist",
+            "CheckoutDate",
+            "TentativeReturnDate",
+            "BatchId",
+            "CheckOutId"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"
@@ -42,7 +48,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "Scientist"
+          "data": "Checkout"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -84,7 +90,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "CheckOut_FETCH_SCIENTIST",
+  "id": "CheckOut_FETCH_TABLE_CHECKOUT",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed05858e503f763651883a"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed04103d635531450606a9"
 }

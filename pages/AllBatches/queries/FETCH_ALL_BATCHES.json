@@ -40,7 +40,10 @@
             "Project",
             "ReceivedDate",
             "CDDRegisteredDate",
-            "CDDImportFileName"
+            "CDDImportFileName",
+            "IsPhysicallyReceived",
+            "IsCDDRegistered",
+            "IsInitialCheckedOut"
           ]
         },
         "queryFormat": {

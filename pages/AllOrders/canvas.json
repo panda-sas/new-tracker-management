@@ -84,7 +84,7 @@
                   ],
                   "children": [
                     {
-                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                       "borderColor": "",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
@@ -97,9 +97,6 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
-                        },
-                        {
-                          "key": "boxShadow"
                         },
                         {
                           "key": "tableData"
@@ -155,7 +152,7 @@
                       ],
                       "leftColumn": 1,
                       "delimiter": ",",
-                      "variant": "VARIANT3",
+                      "variant": "DEFAULT",
                       "defaultSelectedRowIndex": 0,
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -188,7 +185,7 @@
                           "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                         }
                       },
-                      "borderRadius": "0px",
+                      "borderRadius": "0.375rem",
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -199,10 +196,10 @@
                         "Dispatcher",
                         "ShipmentDate",
                         "TrackingID",
+                        "customColumn1",
                         "isComplete",
                         "NoOfShipments",
                         "EditActions1",
-                        "customColumn1",
                         "OrderId",
                         "rowIndex"
                       ],
@@ -220,7 +217,7 @@
                           "key": "primaryColumns.customColumn1.onClick"
                         }
                       ],
-                      "compactMode": "TALL",
+                      "compactMode": "DEFAULT",
                       "displayName": "Table",
                       "bottomRow": 53,
                       "columnWidthMap": {
@@ -235,7 +232,7 @@
                         "ShipmentDate": 203,
                         "TrackingID": 174,
                         "Form": 99,
-                        "NoOfShipments": 239,
+                        "NoOfShipments": 184,
                         "isComplete": 151,
                         "customColumn1": 221,
                         "EditActions1": 213
@@ -561,7 +558,7 @@
                           "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId, \"Scientist\" : OpenOrdersTable.selectedRow.Scientist, \"Dispatcher\": OpenOrdersTable.selectedRow.Dispatcher}, 'SAME_WINDOW')}}"
                         }
                       },
-                      "borderWidth": "\n0.5",
+                      "borderWidth": "\n",
                       "onRowSelected": "",
                       "key": "mi706qsnar",
                       "isDeprecated": false,

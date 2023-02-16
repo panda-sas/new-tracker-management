@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_CHECKOUT",
+    "name": "UPDATE_CHECKOUT_FROM_MODAL",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -33,13 +33,28 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "Scientist",
+            "CheckoutDate",
+            "TentativeReturnDate",
+            "Purpose",
+            "IsReturned",
+            "ActualReturnDate",
+            "IsResultedUploadedToCDD",
+            "Reviewer",
+            "IsReviewed",
+            "ReviewDate",
+            "BatchId"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"
         },
         "range": {
           "data": ""
+        },
+        "rowObjects": {
+          "data": "{{\n{...CheckOutTable.selectedRow,\n\t\"Purpose\":PurposeInputText.text,\n\t\"IsReturned\":ReturnSwitch.isSwitchedOn,\n\t\"ActualReturnDate\":ReturnDate.formattedDate,\n\t\"IsResultedUploadedToCDD\":ResultSwitch.isSwitchedOn,\n\t\"IsReviewed\":ReviewedSwitch.isSwitchedOn,\t\n\t\"CDDResultURL\": CDDUrlInputText.text, \n\t\"Comments\":CommentsInputText.text,\n\t\"Reviewer\":ReviewerInputSelect.selectedOptionValue,\n\t\"ReviewDate\":ReviewDate.formattedDate\n}\n}}"
         },
         "sheetName": {
           "data": "Checkout"
@@ -50,27 +65,12 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "EQ",
-                "key": "CheckOutId",
-                "value": "{{CheckOutTable.selectedRow.CheckOutId}}"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
@@ -78,21 +78,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[0].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "CheckOutTable.selectedRow.CheckOutId"
+      "\n{...CheckOutTable.selectedRow,\n\t\"Purpose\":PurposeInputText.text,\n\t\"IsReturned\":ReturnSwitch.isSwitchedOn,\n\t\"ActualReturnDate\":ReturnDate.formattedDate,\n\t\"IsResultedUploadedToCDD\":ResultSwitch.isSwitchedOn,\n\t\"IsReviewed\":ReviewedSwitch.isSwitchedOn,\t\n\t\"CDDResultURL\": CDDUrlInputText.text, \n\t\"Comments\":CommentsInputText.text,\n\t\"Reviewer\":ReviewerInputSelect.selectedOptionValue,\n\t\"ReviewDate\":ReviewDate.formattedDate\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CheckOut_FETCH_CHECKOUT",
+  "id": "CheckOut_UPDATE_CHECKOUT_FROM_MODAL",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63edbc8ea01b764626f27efc"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63edb3eb8e503f7636519383"
 }
