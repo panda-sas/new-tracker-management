@@ -98,7 +98,7 @@
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Check Out Batch",
+                      "text": "Checkout",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 29,
@@ -914,6 +914,9 @@
                         },
                         {
                           "key": "primaryColumns.IsPlateCreated.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.BatchId.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -974,7 +977,8 @@
                         "Comments",
                         "IsPlateCreated",
                         "EditActions1",
-                        "rowIndex"
+                        "rowIndex",
+                        "BatchId"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1005,6 +1009,9 @@
                       "dynamicTriggerPathList": [
                         {
                           "key": "primaryColumns.EditActions1.onSave"
+                        },
+                        {
+                          "key": "onRowSelected"
                         }
                       ],
                       "borderWidth": "1",
@@ -1447,8 +1454,37 @@
                           "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"IsPlateCreated\"]))}}",
                           "validation": {},
                           "cellBackground": ""
+                        },
+                        "BatchId": {
+                          "allowCellWrapping": false,
+                          "index": 13,
+                          "width": 150,
+                          "originalId": "BatchId",
+                          "id": "BatchId",
+                          "alias": "BatchId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "BatchId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
+                      "onRowSelected": "{{BatchWidgetFuncs.updateBatchDetailsContainer()}}",
                       "key": "bpzxwnwf14",
                       "isDeprecated": false,
                       "rightColumn": 46,

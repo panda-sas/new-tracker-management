@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "BatchWidgetFuncs",
+    "pageId": "CheckOut",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CheckOut_BatchWidgetFuncs",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed86eca01b764626f27c27"
+}

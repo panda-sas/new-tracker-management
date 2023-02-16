@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_CHECKOUT",
+    "name": "FETCH_ORDERS",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -33,22 +33,7 @@
           }
         },
         "projection": {
-          "data": [
-            "Scientist",
-            "CheckoutDate",
-            "TentativeReturnDate",
-            "Purpose",
-            "IsReturned",
-            "ActualReturnDate",
-            "IsResultedUploadedToCDD",
-            "CDDResultURL",
-            "Reviewer",
-            "IsReviewed",
-            "ReviewDate",
-            "Comments",
-            "IsPlateCreated",
-            "BatchId"
-          ]
+          "data": []
         },
         "queryFormat": {
           "data": "ROWS"
@@ -57,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "Checkout"
+          "data": "Order"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -81,25 +66,33 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "LT"
+                "condition": "EQ",
+                "key": "OrderId",
+                "value": "{{this.params.orderId}}"
               }
             ]
           }
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "this.params.orderId"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CheckOut_FETCH_CHECKOUT",
+  "id": "CheckOut_FETCH_ORDERS",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed04103d635531450606a9"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed8fc6a01b764626f27c96"
 }
