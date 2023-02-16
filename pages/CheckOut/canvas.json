@@ -383,7 +383,7 @@
                               "bottomRow": 43,
                               "shortcuts": false,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "12",
                               "type": "DATE_PICKER_WIDGET2",
                               "hideCard": false,
                               "animateLoading": true,
@@ -585,7 +585,7 @@
                               "fontFamily": "Inter",
                               "parentColumnSpace": 6.0651092529296875,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 15,
+                              "leftColumn": 17,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "truncateButtonColor"
@@ -599,7 +599,7 @@
                               "text": "Label",
                               "key": "nd9wt080me",
                               "isDeprecated": false,
-                              "rightColumn": 46,
+                              "rightColumn": 49,
                               "textAlign": "LEFT",
                               "dynamicHeight": "FIXED",
                               "widgetId": "ps74b46hb1",
@@ -684,7 +684,7 @@
                               "fontFamily": "Inter",
                               "parentColumnSpace": 6.0651092529296875,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 15,
+                              "leftColumn": 17,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "truncateButtonColor"
@@ -698,7 +698,7 @@
                               "text": "Label",
                               "key": "nd9wt080me",
                               "isDeprecated": false,
-                              "rightColumn": 33,
+                              "rightColumn": 36,
                               "textAlign": "LEFT",
                               "dynamicHeight": "FIXED",
                               "widgetId": "mwkkzqhyne",
@@ -783,7 +783,7 @@
                               "fontFamily": "Inter",
                               "parentColumnSpace": 6.0651092529296875,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 15,
+                              "leftColumn": 17,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "truncateButtonColor"
@@ -797,7 +797,7 @@
                               "text": "Label",
                               "key": "nd9wt080me",
                               "isDeprecated": false,
-                              "rightColumn": 33,
+                              "rightColumn": 36,
                               "textAlign": "LEFT",
                               "dynamicHeight": "FIXED",
                               "widgetId": "aiuoykzdvx",
@@ -987,7 +987,7 @@
                               "fontFamily": "Inter",
                               "parentColumnSpace": 6.0651092529296875,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 15,
+                              "leftColumn": 17,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "truncateButtonColor"
@@ -1001,7 +1001,7 @@
                               "text": "Label",
                               "key": "nd9wt080me",
                               "isDeprecated": false,
-                              "rightColumn": 33,
+                              "rightColumn": 36,
                               "textAlign": "LEFT",
                               "dynamicHeight": "FIXED",
                               "widgetId": "xfkdjkzl6e",
@@ -1033,7 +1033,7 @@
                               "topRow": 43,
                               "bottomRow": 47,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "12",
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
                               "hideCard": false,
@@ -1092,7 +1092,7 @@
                               "topRow": 47,
                               "bottomRow": 51,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "12",
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
                               "hideCard": false,
@@ -1150,7 +1150,7 @@
                               "topRow": 51,
                               "bottomRow": 55,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "12",
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
@@ -1209,7 +1209,7 @@
                               "bottomRow": 59,
                               "shortcuts": false,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "12",
                               "type": "DATE_PICKER_WIDGET2",
                               "hideCard": false,
                               "animateLoading": true,
@@ -1311,7 +1311,7 @@
                               "topRow": 35,
                               "bottomRow": 39,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "12",
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
                               "hideCard": false,
