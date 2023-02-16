@@ -20,10 +20,10 @@ export default {
 		ResultSwitch.isSwitchedOn = checkoutData['IsResultedUploadedToCDD']
 		ReviewedSwitch.isSwitchedOn = checkoutData['IsReviewed']
 		PurposeInputText.inputText = checkoutData['Purpose']
-		ReturnDate.selectedDate = checkoutData['ActualReturnDate']
+		ReturnDate.formattedDate = checkoutData['ActualReturnDate']
 		CDDUrlInputText.inputText = checkoutData['CDDResultURL']
 		CommentsInputText.inputText = checkoutData['Comments']
 		ReviewerInputSelect.selectedOptionValue = checkoutData['Reviewer']
-		ReviewDate.selectedDate = checkoutData['ReviewDate']
+		ReviewDate.formattedDate = {{moment(checkoutData['ReviewDate']).}}
 	}
 }
