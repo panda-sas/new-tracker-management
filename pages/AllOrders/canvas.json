@@ -519,7 +519,7 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( !OpenOrdersTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{ORDER_UPDATE.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}",
+                          "onSave": "{{ORDER_UPDATE.run(() => SELECT_OPEN_ORDERS.run(), () => showAlert('Something went wrong!','error'))}}",
                           "textSize": "0.875rem",
                           "horizontalAlignment": "LEFT"
                         },
@@ -1455,6 +1455,7 @@
                       "widgetName": "CloseButton",
                       "onClick": "{{closeModal('AddOrderModal')}}",
                       "buttonColor": "#1e3a8a",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -1502,8 +1503,9 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "SubmitButton",
-                      "onClick": "{{INSERT_NEW_ORDER.run(() => showAlert('Submitted!','success'), () => showAlert('Something went wrong!','error'))}}",
+                      "onClick": "{{SubmitQueries.OrderSubmit()}}",
                       "buttonColor": "#1e3a8a",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [

@@ -74,9 +74,7 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "EQ",
-                "key": "isComplete",
-                "value": "FALSE"
+                "condition": "LT"
               }
             ]
           }

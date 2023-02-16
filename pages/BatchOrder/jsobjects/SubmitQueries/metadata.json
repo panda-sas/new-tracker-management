@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "SubmitQueries",
+    "pageId": "BatchOrder",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "BatchOrder_SubmitQueries",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ee99fe3d63553145062844"
+}

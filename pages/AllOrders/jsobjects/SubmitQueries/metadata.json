@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "SubmitQueries",
+    "pageId": "AllOrders",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "AllOrders_SubmitQueries",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63eea4a6d616db68c3d436e5"
+}
