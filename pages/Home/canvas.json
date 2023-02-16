@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 630,
+          "bottomRow": 700,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -39,11 +39,11 @@
                 "group"
               ],
               "topRow": 6,
-              "bottomRow": 55,
+              "bottomRow": 62,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
-              "shouldScrollContents": false,
+              "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 10.0625,
               "dynamicTriggerPathList": [],
@@ -54,12 +54,12 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 480,
+                  "bottomRow": 560,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 490,
+                  "minHeight": 560,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -70,15 +70,16 @@
                       "isCanvas": true,
                       "displayName": "Stats Box",
                       "iconSVG": "/static/media/icon.382a7c7bc55323fbbd8edd79208c5324.svg",
-                      "topRow": 26,
-                      "bottomRow": 41,
+                      "topRow": 23,
+                      "bottomRow": 45,
                       "parentRowSpace": 10,
                       "type": "STATBOX_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "parentColumnSpace": 14.0625,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 16,
+                      "leftColumn": 17,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -93,12 +94,12 @@
                           "widgetName": "Canvas111Copy1",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 150,
+                          "bottomRow": 220,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 150,
+                          "minHeight": 220,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [
@@ -124,15 +125,16 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 7,
-                              "bottomRow": 13,
+                              "topRow": 11,
+                              "bottomRow": 18,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 3,
+                              "leftColumn": 6,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -140,13 +142,13 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "A batch is a single or multiple set of compounds inside a box(order)",
+                              "text": "A batch is a single or multiple set of compounds inside a box(order) that is distributed and used by multiple scientists.",
                               "key": "j0z4cpigeh",
                               "isDeprecated": false,
                               "rightColumn": 61,
                               "disableLink": true,
                               "textAlign": "LEFT",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "2yqrcojgt3",
                               "isVisible": true,
                               "fontStyle": "",
@@ -155,13 +157,20 @@
                               "parentId": "t0nzbpbqf6",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 11,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
+                              "originalBottomRow": 18,
                               "fontSize": "0.80rem",
                               "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "TextBatch",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                               "searchTags": [
@@ -173,6 +182,7 @@
                               "bottomRow": 6,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
@@ -191,7 +201,7 @@
                               "rightColumn": 44,
                               "disableLink": true,
                               "textAlign": "CENTER",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "5tl3anbxfn",
                               "isVisible": true,
                               "fontStyle": "",
@@ -200,9 +210,11 @@
                               "parentId": "t0nzbpbqf6",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 2,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "fontSize": "1.25rem",
+                              "originalBottomRow": 6,
+                              "fontSize": "1.55rem",
                               "minDynamicHeight": 4
                             },
                             {
@@ -268,7 +280,7 @@
                                 }
                               ],
                               "imageShape": "RECTANGLE",
-                              "leftColumn": 46,
+                              "leftColumn": 44,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -317,11 +329,11 @@
                       "parentId": "zdw99hck2l",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 26,
+                      "originalTopRow": 23,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 41,
-                      "minDynamicHeight": 4
+                      "originalBottomRow": 45,
+                      "minDynamicHeight": 10
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -329,15 +341,16 @@
                       "isCanvas": true,
                       "displayName": "Stats Box",
                       "iconSVG": "/static/media/icon.382a7c7bc55323fbbd8edd79208c5324.svg",
-                      "topRow": 26,
-                      "bottomRow": 41,
+                      "topRow": 23,
+                      "bottomRow": 45,
                       "parentRowSpace": 10,
                       "type": "STATBOX_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "parentColumnSpace": 14.0625,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 48,
+                      "leftColumn": 49,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -352,12 +365,12 @@
                           "widgetName": "Canvas111CopyCopy",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 150,
+                          "bottomRow": 220,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 150,
+                          "minHeight": 220,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [
@@ -383,10 +396,11 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 7,
-                              "bottomRow": 13,
+                              "topRow": 12,
+                              "bottomRow": 18,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
@@ -399,13 +413,13 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Check out and check in compounds, maintain information related to dates, and CDD results",
+                              "text": "Check out and check in compounds,maintain dates, and CDD experimental results",
                               "key": "j0z4cpigeh",
                               "isDeprecated": false,
-                              "rightColumn": 64,
+                              "rightColumn": 59,
                               "disableLink": true,
                               "textAlign": "LEFT",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "leq2ijxvz6",
                               "isVisible": true,
                               "fontStyle": "",
@@ -414,13 +428,20 @@
                               "parentId": "oiaj95ihrt",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 12,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
+                              "originalBottomRow": 18,
                               "fontSize": "0.80rem",
                               "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "TextCheckInOut",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                               "searchTags": [
@@ -428,15 +449,16 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 1,
-                              "bottomRow": 7,
+                              "topRow": 2,
+                              "bottomRow": 9,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 10,
+                              "leftColumn": 8,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -447,9 +469,9 @@
                               "text": "Check In/Out",
                               "key": "j0z4cpigeh",
                               "isDeprecated": false,
-                              "rightColumn": 46,
+                              "rightColumn": 44,
                               "textAlign": "CENTER",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "e7desd9cgl",
                               "isVisible": true,
                               "fontStyle": "",
@@ -458,9 +480,11 @@
                               "parentId": "oiaj95ihrt",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 2,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "fontSize": "1.25rem",
+                              "originalBottomRow": 9,
+                              "fontSize": "1.55rem",
                               "minDynamicHeight": 4
                             },
                             {
@@ -481,7 +505,7 @@
                               "animateLoading": true,
                               "parentColumnSpace": 19.8125,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 2,
+                              "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -495,7 +519,7 @@
                               "orientation": "horizontal",
                               "strokeStyle": "solid",
                               "isDeprecated": false,
-                              "rightColumn": 9,
+                              "rightColumn": 8,
                               "widgetId": "3d7g3921dc",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "capSide": 0,
@@ -526,7 +550,7 @@
                                 }
                               ],
                               "imageShape": "RECTANGLE",
-                              "leftColumn": 46,
+                              "leftColumn": 44,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -575,11 +599,11 @@
                       "parentId": "zdw99hck2l",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 26,
+                      "originalTopRow": 23,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 41,
-                      "minDynamicHeight": 4
+                      "originalBottomRow": 45,
+                      "minDynamicHeight": 10
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -587,15 +611,16 @@
                       "isCanvas": true,
                       "displayName": "Stats Box",
                       "iconSVG": "/static/media/icon.382a7c7bc55323fbbd8edd79208c5324.svg",
-                      "topRow": 26,
-                      "bottomRow": 41,
+                      "topRow": 23,
+                      "bottomRow": 45,
                       "parentRowSpace": 10,
                       "type": "STATBOX_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "parentColumnSpace": 14.0625,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -610,12 +635,12 @@
                           "widgetName": "Canvas111",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 150,
+                          "bottomRow": 220,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 150,
+                          "minHeight": 220,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [
@@ -641,15 +666,16 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 7,
-                              "bottomRow": 13,
+                              "topRow": 10,
+                              "bottomRow": 17,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 1,
+                              "leftColumn": 3,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -657,13 +683,13 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "An order is a box that physically arrives with a shipping label on it.",
+                              "text": "An order is a box that physically arrives with a shipping label on it. This is the entry point to the app.",
                               "key": "j0z4cpigeh",
                               "isDeprecated": false,
-                              "rightColumn": 63,
+                              "rightColumn": 62,
                               "disableLink": true,
                               "textAlign": "LEFT",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "1ynabvavs8",
                               "isVisible": true,
                               "fontStyle": "",
@@ -672,13 +698,20 @@
                               "parentId": "ddk86jv9ny",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 10,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
+                              "originalBottomRow": 17,
                               "fontSize": "0.80rem",
                               "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "TextOrders",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                               "searchTags": [
@@ -690,6 +723,7 @@
                               "bottomRow": 6,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
@@ -708,7 +742,7 @@
                               "rightColumn": 44,
                               "disableLink": true,
                               "textAlign": "CENTER",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "dmb2m3umso",
                               "isVisible": true,
                               "fontStyle": "",
@@ -717,9 +751,11 @@
                               "parentId": "ddk86jv9ny",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 2,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "fontSize": "1.25rem",
+                              "originalBottomRow": 6,
+                              "fontSize": "1.55rem",
                               "minDynamicHeight": 4
                             },
                             {
@@ -785,7 +821,7 @@
                                 }
                               ],
                               "imageShape": "RECTANGLE",
-                              "leftColumn": 46,
+                              "leftColumn": 44,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -834,11 +870,11 @@
                       "parentId": "zdw99hck2l",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 26,
+                      "originalTopRow": 23,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 41,
-                      "minDynamicHeight": 4
+                      "originalBottomRow": 45,
+                      "minDynamicHeight": 10
                     },
                     {
                       "widgetName": "HeaderText",
@@ -850,10 +886,11 @@
                         "label"
                       ],
                       "topRow": 4,
-                      "bottomRow": 10,
+                      "bottomRow": 11,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "overflow": "NONE",
                       "fontFamily": "System Default",
@@ -878,7 +915,7 @@
                       "isDeprecated": false,
                       "rightColumn": 59,
                       "textAlign": "LEFT",
-                      "dynamicHeight": "FIXED",
+                      "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "zaqfg1k8c5",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -887,8 +924,10 @@
                       "parentId": "zdw99hck2l",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 4,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 11,
                       "fontSize": "3rem",
                       "minDynamicHeight": 4
                     },
@@ -939,8 +978,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 11,
-                      "bottomRow": 16,
+                      "topRow": 12,
+                      "bottomRow": 17,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -966,7 +1005,7 @@
                       "isDeprecated": false,
                       "rightColumn": 59,
                       "textAlign": "LEFT",
-                      "dynamicHeight": "AUTO_HEIGHT_WITH_LIMITS",
+                      "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "8u6ocidn5v",
                       "isVisible": true,
                       "fontStyle": "",
@@ -975,11 +1014,11 @@
                       "parentId": "zdw99hck2l",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 11,
+                      "originalTopRow": 12,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 7,
-                      "originalBottomRow": 16,
-                      "fontSize": "0.875rem",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 17,
+                      "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -988,15 +1027,16 @@
                       "isCanvas": true,
                       "displayName": "Stats Box",
                       "iconSVG": "/static/media/icon.382a7c7bc55323fbbd8edd79208c5324.svg",
-                      "topRow": 26,
-                      "bottomRow": 41,
+                      "topRow": 23,
+                      "bottomRow": 45,
                       "parentRowSpace": 10,
                       "type": "STATBOX_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "parentColumnSpace": 14.0625,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 32,
+                      "leftColumn": 33,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -1011,12 +1051,12 @@
                           "widgetName": "Canvas111Copy",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 150,
+                          "bottomRow": 220,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 150,
+                          "minHeight": 220,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [
@@ -1042,15 +1082,16 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 7,
-                              "bottomRow": 13,
+                              "topRow": 11,
+                              "bottomRow": 17,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 0,
+                              "leftColumn": 3,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -1058,13 +1099,13 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Contains compound information such as SACCIDs, Concentration, Amount ",
+                              "text": "Contains compound information such as SACCIDs, concentration, inital and final amount",
                               "key": "j0z4cpigeh",
                               "isDeprecated": false,
-                              "rightColumn": 64,
+                              "rightColumn": 60,
                               "disableLink": true,
                               "textAlign": "LEFT",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "g7e2ibmth3",
                               "isVisible": true,
                               "fontStyle": "",
@@ -1073,13 +1114,20 @@
                               "parentId": "y2kegy4zoe",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 11,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
+                              "originalBottomRow": 17,
                               "fontSize": "0.80rem",
                               "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "TextCompounds",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                               "searchTags": [
@@ -1087,15 +1135,16 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 1,
-                              "bottomRow": 7,
+                              "topRow": 2,
+                              "bottomRow": 6,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "animateLoading": true,
                               "overflow": "NONE",
                               "fontFamily": "Inter",
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 10,
+                              "leftColumn": 6,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -1106,9 +1155,9 @@
                               "text": "Compounds",
                               "key": "j0z4cpigeh",
                               "isDeprecated": false,
-                              "rightColumn": 46,
+                              "rightColumn": 47,
                               "textAlign": "CENTER",
-                              "dynamicHeight": "FIXED",
+                              "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "0l7or3h66z",
                               "isVisible": true,
                               "fontStyle": "",
@@ -1117,9 +1166,11 @@
                               "parentId": "y2kegy4zoe",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 2,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "fontSize": "1.25rem",
+                              "originalBottomRow": 9,
+                              "fontSize": "1.55rem",
                               "minDynamicHeight": 4
                             },
                             {
@@ -1140,7 +1191,7 @@
                               "animateLoading": true,
                               "parentColumnSpace": 19.8125,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 2,
+                              "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -1154,7 +1205,7 @@
                               "orientation": "horizontal",
                               "strokeStyle": "solid",
                               "isDeprecated": false,
-                              "rightColumn": 9,
+                              "rightColumn": 6,
                               "widgetId": "comzz55hr8",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "capSide": 0,
@@ -1185,7 +1236,7 @@
                                 }
                               ],
                               "imageShape": "RECTANGLE",
-                              "leftColumn": 46,
+                              "leftColumn": 47,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "borderRadius"
@@ -1195,7 +1246,7 @@
                               "key": "g76ztn8fne",
                               "image": "",
                               "isDeprecated": false,
-                              "rightColumn": 63,
+                              "rightColumn": 64,
                               "objectFit": "contain",
                               "widgetId": "062lktriui",
                               "isVisible": true,
@@ -1227,18 +1278,18 @@
                       "key": "5m7may5ry7",
                       "backgroundColor": "#192550",
                       "isDeprecated": false,
-                      "rightColumn": 46,
+                      "rightColumn": 47,
                       "dynamicHeight": "FIXED",
                       "widgetId": "skb8sqgen6",
                       "isVisible": true,
                       "parentId": "zdw99hck2l",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 26,
+                      "originalTopRow": 23,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 41,
-                      "minDynamicHeight": 4
+                      "originalBottomRow": 45,
+                      "minDynamicHeight": 10
                     }
                   ],
                   "key": "t8xlensmyx",
