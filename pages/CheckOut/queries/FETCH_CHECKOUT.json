@@ -37,7 +37,16 @@
             "Scientist",
             "CheckoutDate",
             "TentativeReturnDate",
-            "Purpose"
+            "Purpose",
+            "IsReturned",
+            "ActualReturnDate",
+            "IsResultedUploadedToCDD",
+            "CDDResultURL",
+            "Reviewer",
+            "IsReviewed",
+            "ReviewDate",
+            "Comments",
+            "IsPlateCreated"
           ]
         },
         "queryFormat": {
