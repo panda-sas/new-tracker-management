@@ -58,7 +58,7 @@
                   "widgetName": "Canvas113",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 180,
+                  "bottomRow": 190,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -275,49 +275,6 @@
                       "maxDynamicHeight": 9000,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "IconButton1",
-                      "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW')}}",
-                      "buttonColor": "#fafafa",
-                      "displayName": "Icon Button",
-                      "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
-                      "searchTags": [
-                        "click",
-                        "submit"
-                      ],
-                      "topRow": 5,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "ICON_BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 19.75,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
-                      "leftColumn": 57,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "isDisabled": false,
-                      "key": "6okpswbnvu",
-                      "isDeprecated": false,
-                      "rightColumn": 61,
-                      "iconName": "home",
-                      "widgetId": "wz3gkkf0s5",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "qx7o14snd5",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "buttonVariant": "TERTIARY"
                     }
                   ],
                   "key": "1lq17xmg8s",
