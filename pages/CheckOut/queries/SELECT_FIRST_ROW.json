@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_COMPOUNDS",
+    "name": "SELECT_FIRST_ROW",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllCompoundsNoFilter",
+    "pageId": "CheckOut",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -39,10 +39,10 @@
           "data": "ROWS"
         },
         "range": {
-          "data": ""
+          "data": "A2:N"
         },
         "sheetName": {
-          "data": "Compound"
+          "data": "Checkout"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -66,14 +66,16 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "LT"
+                "condition": "EQ",
+                "key": "rowIndex",
+                "value": "0"
               }
             ]
           }
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -84,7 +86,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllCompoundsNoFilter_FETCH_COMPOUNDS",
+  "id": "CheckOut_SELECT_FIRST_ROW",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed98a9c06b5b5299c33c67"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63efc460d616db68c3d45138"
 }

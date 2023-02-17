@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "INSERT_ONE"
+          "data": "INSERT_MANY"
         },
         "entityType": {
           "data": "ROWS"
@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\t\n\t\"BatchId\" : {{appsmith.URL.queryParams.BatchId}},\n\t\"CompoundId\": {{Generator.getUUID()}},\n\t\"SACCId\": \"SAC-1023435\",\n\t\"Concentration\": \"23\",\n\t\"InitialAmount\": \"200\",\n\t\"CurrentAmountLeft\": \"400\"\n}"
+          "data": "{{UploadCSVHelper.csv2JSON(UploadCSVFilePicker.files[0].data)}}\n"
         },
         "sheetName": {
           "data": "Compound"
@@ -73,8 +73,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Generator.getUUID()",
-      "appsmith.URL.queryParams.BatchId"
+      "UploadCSVHelper.csv2JSON(UploadCSVFilePicker.files[0].data)"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

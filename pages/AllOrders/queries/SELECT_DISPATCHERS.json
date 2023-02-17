@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_COMPOUNDS",
+    "name": "SELECT_DISPATCHERS",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllCompoundsNoFilter",
+    "pageId": "AllOrders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "Compound"
+          "data": "Dispatcher"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -84,7 +84,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllCompoundsNoFilter_FETCH_COMPOUNDS",
+  "id": "AllOrders_SELECT_DISPATCHERS",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed98a9c06b5b5299c33c67"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63efb8ecd616db68c3d45044"
 }

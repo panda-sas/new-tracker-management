@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "UploadCSVHelper",
+    "pageId": "AllCompounds",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "AllCompounds_UploadCSVHelper",
+  "deleted": false,
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63efb6ad3d6355314506431c"
+}

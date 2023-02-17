@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\n\t\"Dispatcher\": {{DispatcherInput.text}},\n\t\"Scientist\": {{ScientistSelect.selectedOptionValue}},\n\t\"OrderId\": {{Generator.getUUID()}},\n\t\"isComplete\": {{\"FALSE\"}}\n}\n"
+          "data": "{\n\t\"Dispatcher\": {{DispatcherSelect.selectedOptionValue}},\n\t\"Scientist\": {{ScientistSelect.selectedOptionValue}},\n\t\"OrderId\": {{Generator.getUUID()}},\n\t\"isComplete\": {{\"FALSE\"}}\n}\n"
         },
         "sheetName": {
           "data": "Order"
@@ -74,7 +74,7 @@
     "messages": [],
     "jsonPathKeys": [
       "\"FALSE\"",
-      "DispatcherInput.text",
+      "DispatcherSelect.selectedOptionValue",
       "Generator.getUUID()",
       "ScientistSelect.selectedOptionValue"
     ],

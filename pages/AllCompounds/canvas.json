@@ -292,7 +292,7 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                          "onSave": "{{UPDATE_COMPOUND.run(() => FETCH_COMPOUNDS.run(), () => showAlert('Something went wrong!','error'))}}"
                         },
                         "CompoundId": {
                           "allowCellWrapping": false,
@@ -589,6 +589,108 @@
                   ],
                   "children": [
                     {
+                      "isCompact": false,
+                      "boxShadow": "none",
+                      "widgetName": "MenuButton",
+                      "displayName": "Menu Button",
+                      "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
+                      "topRow": 5,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "MENU_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 13.9814453125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "menuItems.menuItem1.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem2.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem93y1l3qly0.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItemn7poebc4wk.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem7wmy9eec0t.onClick"
+                        }
+                      ],
+                      "leftColumn": 61,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "key": "8de2s6u1o4",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "iconName": "menu",
+                      "menuVariant": "PRIMARY",
+                      "widgetId": "j8fxg7x8q0",
+                      "menuItems": {
+                        "menuItem1": {
+                          "label": "Home",
+                          "id": "menuItem1",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 0,
+                          "onClick": "{{navigateTo('Dashboard', {})}}"
+                        },
+                        "menuItemn7poebc4wk": {
+                          "id": "menuItemn7poebc4wk",
+                          "index": 1,
+                          "label": "Orders",
+                          "widgetId": "n9ytupq9c5",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "onClick": "{{navigateTo('AllOrders', {}, 'SAME_WINDOW')}}"
+                        },
+                        "menuItem7wmy9eec0t": {
+                          "id": "menuItem7wmy9eec0t",
+                          "index": 2,
+                          "label": "Batches",
+                          "widgetId": "vd5d8xe2ez",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "onClick": "{{navigateTo('AllBatches', {}, 'SAME_WINDOW')}}"
+                        },
+                        "menuItem2": {
+                          "label": "Compounds",
+                          "id": "menuItem2",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 3,
+                          "onClick": "{{navigateTo('AllCompoundsNoFilter', {})}}"
+                        },
+                        "menuItem93y1l3qly0": {
+                          "id": "menuItem93y1l3qly0",
+                          "index": 4,
+                          "label": "Check In/Out",
+                          "widgetId": "47913puvxu",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "onClick": "{{navigateTo('CheckOut', {}, 'SAME_WINDOW')}}"
+                        }
+                      },
+                      "isVisible": true,
+                      "label": "",
+                      "version": 1,
+                      "parentId": "qxovz6lj5r",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "menuColor": "#000D3D",
+                      "menuItemsSource": "STATIC",
+                      "iconAlign": "left",
+                      "placement": "CENTER"
+                    },
+                    {
                       "boxShadow": "none",
                       "widgetName": "SubTitleText",
                       "dynamicPropertyPathList": [
@@ -724,84 +826,6 @@
                       "maxDynamicHeight": 9000,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
-                    },
-                    {
-                      "isCompact": false,
-                      "boxShadow": "none",
-                      "widgetName": "MenuButton",
-                      "displayName": "Menu Button",
-                      "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
-                      "topRow": 6,
-                      "bottomRow": 11,
-                      "parentRowSpace": 10,
-                      "type": "MENU_BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.9814453125,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "menuItems.menuItem1.onClick"
-                        },
-                        {
-                          "key": "menuItems.menuItem2.onClick"
-                        },
-                        {
-                          "key": "menuItems.menuItem93y1l3qly0.onClick"
-                        }
-                      ],
-                      "leftColumn": 60,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "isDisabled": false,
-                      "key": "8de2s6u1o4",
-                      "isDeprecated": false,
-                      "rightColumn": 62,
-                      "iconName": "menu",
-                      "menuVariant": "PRIMARY",
-                      "widgetId": "mg36og9xjt",
-                      "menuItems": {
-                        "menuItem1": {
-                          "label": "Home",
-                          "id": "menuItem1",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 0,
-                          "onClick": "{{navigateTo('Dashboard', {})}}"
-                        },
-                        "menuItem2": {
-                          "label": "All Compounds",
-                          "id": "menuItem2",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 1,
-                          "onClick": "{{navigateTo('Search', {})}}"
-                        },
-                        "menuItem93y1l3qly0": {
-                          "id": "menuItem93y1l3qly0",
-                          "index": 2,
-                          "label": "Check In/Out",
-                          "widgetId": "47913puvxu",
-                          "isDisabled": false,
-                          "isVisible": true,
-                          "onClick": "{{navigateTo('App usage', {})}}"
-                        }
-                      },
-                      "isVisible": true,
-                      "label": "",
-                      "version": 1,
-                      "parentId": "qxovz6lj5r",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "menuColor": "#000D3D",
-                      "menuItemsSource": "STATIC",
-                      "iconAlign": "left",
-                      "placement": "CENTER"
                     }
                   ],
                   "key": "1lq17xmg8s",
@@ -927,7 +951,7 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 11,
+                      "originalTopRow": 12,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 16,
@@ -988,15 +1012,15 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 1,
-                      "bottomRow": 5,
+                      "topRow": 0,
+                      "bottomRow": 4,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 3,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -1013,8 +1037,8 @@
                       "text": "Import Compounds",
                       "key": "yed6llcd4m",
                       "isDeprecated": false,
-                      "rightColumn": 31,
-                      "textAlign": "LEFT",
+                      "rightColumn": 58,
+                      "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "zn861t1bfu",
                       "isVisible": true,
@@ -1024,9 +1048,11 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "fontSize": "1.25rem",
+                      "originalBottomRow": 5,
+                      "fontSize": "1.875rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -1082,7 +1108,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "SubmitButton",
-                      "onClick": "{{INSERT_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}",
+                      "onClick": "{{FETCH_COMPOUNDS.run(() => closeModal('AddCompoundsModal'), () => {})}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1140,12 +1166,18 @@
                       "topRow": 7,
                       "bottomRow": 11,
                       "parentRowSpace": 10,
-                      "allowedFileTypes": [],
+                      "allowedFileTypes": [
+                        "text/*"
+                      ],
                       "type": "FILE_PICKER_WIDGET_V2",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFilesSelected"
+                        }
+                      ],
                       "leftColumn": 23,
                       "dynamicBindingPathList": [
                         {
@@ -1154,6 +1186,7 @@
                       ],
                       "isDisabled": false,
                       "key": "ghs9dup4tz",
+                      "onFilesSelected": "{{INSERT_COMPOUND.run()}}",
                       "isRequired": false,
                       "isDeprecated": false,
                       "rightColumn": 62,
@@ -1164,12 +1197,14 @@
                       "maxFileSize": 5,
                       "dynamicTyping": true,
                       "version": 1,
-                      "fileDataType": "Base64",
+                      "fileDataType": "Text",
                       "parentId": "tkvfe2y4tl",
                       "selectedFiles": [],
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 8,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 12,
                       "files": [],
                       "maxNumFiles": 1
                     },
@@ -1192,7 +1227,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -1206,25 +1241,25 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Add compounds",
+                      "text": "Add compounds :",
                       "key": "yed6llcd4m",
                       "isDeprecated": false,
-                      "rightColumn": 22,
-                      "textAlign": "LEFT",
+                      "rightColumn": 21,
+                      "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "sgcryi0jt9",
                       "isVisible": true,
-                      "fontStyle": "",
+                      "fontStyle": "BOLD",
                       "textColor": "#231F20",
                       "version": 1,
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 6,
+                      "originalTopRow": 8,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 10,
-                      "fontSize": "0.875rem",
+                      "originalBottomRow": 12,
+                      "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -1256,7 +1291,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "width": 458,
+              "width": 600,
               "minDynamicHeight": 24
             }
           ]

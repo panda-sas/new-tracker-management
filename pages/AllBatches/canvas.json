@@ -27,7 +27,7 @@
           "children": [
             {
               "boxShadow": "none",
-              "widgetName": "SelectedOrderContainer",
+              "widgetName": "HeaderContainer",
               "borderColor": "#E0DEDE",
               "isCanvas": true,
               "displayName": "Container",
@@ -189,6 +189,12 @@
                         },
                         {
                           "key": "menuItems.menuItem93y1l3qly0.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItemn7poebc4wk.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem7wmy9eec0t.onClick"
                         }
                       ],
                       "leftColumn": 61,
@@ -214,23 +220,41 @@
                           "index": 0,
                           "onClick": "{{navigateTo('Dashboard', {})}}"
                         },
+                        "menuItemn7poebc4wk": {
+                          "id": "menuItemn7poebc4wk",
+                          "index": 1,
+                          "label": "Orders",
+                          "widgetId": "n9ytupq9c5",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "onClick": "{{navigateTo('AllOrders', {}, 'SAME_WINDOW')}}"
+                        },
+                        "menuItem7wmy9eec0t": {
+                          "id": "menuItem7wmy9eec0t",
+                          "index": 2,
+                          "label": "Batches",
+                          "widgetId": "vd5d8xe2ez",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "onClick": "{{navigateTo('AllBatches', {}, 'SAME_WINDOW')}}"
+                        },
                         "menuItem2": {
-                          "label": "All Compounds",
+                          "label": "Compounds",
                           "id": "menuItem2",
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": false,
-                          "index": 1,
-                          "onClick": "{{navigateTo('Search', {})}}"
+                          "index": 3,
+                          "onClick": "{{navigateTo('AllCompoundsNoFilter', {})}}"
                         },
                         "menuItem93y1l3qly0": {
                           "id": "menuItem93y1l3qly0",
-                          "index": 2,
+                          "index": 4,
                           "label": "Check In/Out",
                           "widgetId": "47913puvxu",
                           "isDisabled": false,
                           "isVisible": true,
-                          "onClick": "{{navigateTo('App usage', {})}}"
+                          "onClick": "{{navigateTo('CheckOut', {}, 'SAME_WINDOW')}}"
                         }
                       },
                       "isVisible": true,
