@@ -595,7 +595,7 @@
                           "isVisible": true,
                           "isDisabled": false,
                           "index": 0,
-                          "onClick": "{{navigateTo('Dashboard', {})}}"
+                          "onClick": "{{navigateTo('Home', {})}}"
                         },
                         "menuItemn7poebc4wk": {
                           "id": "menuItemn7poebc4wk",

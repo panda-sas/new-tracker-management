@@ -1061,6 +1061,7 @@
                       "isCompact": false,
                       "boxShadow": "none",
                       "widgetName": "MenuButton",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Menu Button",
                       "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
                       "topRow": 6,
@@ -1108,7 +1109,7 @@
                           "isVisible": true,
                           "isDisabled": false,
                           "index": 0,
-                          "onClick": "{{navigateTo('Dashboard', {})}}"
+                          "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW')}}"
                         },
                         "menuItemn7poebc4wk": {
                           "id": "menuItemn7poebc4wk",

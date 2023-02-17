@@ -79,6 +79,16 @@
                       "isCompact": false,
                       "boxShadow": "none",
                       "widgetName": "MenuButton",
+                      "configureMenuItems": {
+                        "label": "Configure Menu Items",
+                        "id": "config",
+                        "config": {
+                          "id": "config",
+                          "label": "Menu Item",
+                          "isVisible": true,
+                          "isDisabled": false
+                        }
+                      },
                       "displayName": "Menu Button",
                       "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
                       "topRow": 5,
@@ -112,6 +122,7 @@
                         }
                       ],
                       "isDisabled": false,
+                      "sourceData": [],
                       "key": "8de2s6u1o4",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -126,7 +137,7 @@
                           "isVisible": true,
                           "isDisabled": false,
                           "index": 0,
-                          "onClick": "{{navigateTo('Dashboard', {})}}"
+                          "onClick": "{{navigateTo('Home',)}}"
                         },
                         "menuItemn7poebc4wk": {
                           "id": "menuItemn7poebc4wk",
@@ -264,6 +275,49 @@
                       "maxDynamicHeight": 9000,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "IconButton1",
+                      "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW')}}",
+                      "buttonColor": "#fafafa",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 19.75,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 57,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "key": "6okpswbnvu",
+                      "isDeprecated": false,
+                      "rightColumn": 61,
+                      "iconName": "home",
+                      "widgetId": "wz3gkkf0s5",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "qx7o14snd5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "TERTIARY"
                     }
                   ],
                   "key": "1lq17xmg8s",
