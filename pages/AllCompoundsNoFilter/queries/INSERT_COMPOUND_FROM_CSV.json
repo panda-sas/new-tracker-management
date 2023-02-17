@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_COMPOUNDS",
+    "name": "INSERT_COMPOUND_FROM_CSV",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "INSERT_MANY"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,6 +41,9 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{UploadCSVHelper.csvJSON(UploadCSVFilePicker.files[0].data)}}\n\n\n"
+        },
         "sheetName": {
           "data": "TestCompound"
         },
@@ -50,41 +53,34 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "LT"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.rowObjects.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "UploadCSVHelper.csvJSON(UploadCSVFilePicker.files[0].data)"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllCompoundsNoFilter_FETCH_COMPOUNDS",
+  "id": "AllCompoundsNoFilter_INSERT_COMPOUND_FROM_CSV",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed98a9c06b5b5299c33c67"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63eec32e3d63553145062b3d"
 }

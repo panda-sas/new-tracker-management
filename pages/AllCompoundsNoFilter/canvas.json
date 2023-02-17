@@ -150,12 +150,6 @@
                           "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         },
                         {
-                          "key": "primaryColumns.CompoundId.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.BatchId.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.SACCId.computedValue"
                         },
                         {
@@ -163,9 +157,6 @@
                         },
                         {
                           "key": "primaryColumns.InitialAmount.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.CurrentAmountLeft.computedValue"
                         },
                         {
                           "key": "primaryColumns.rowIndex.computedValue"
@@ -213,12 +204,9 @@
                       "widgetName": "AllCompoundsTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "CompoundId",
-                        "BatchId",
                         "SACCId",
                         "Concentration",
                         "InitialAmount",
-                        "CurrentAmountLeft",
                         "EditActions1",
                         "rowIndex"
                       ],
@@ -293,62 +281,6 @@
                           "isSaveDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
                           "onSave": "{{UPDATE_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
-                        },
-                        "CompoundId": {
-                          "allowCellWrapping": false,
-                          "index": 0,
-                          "width": 150,
-                          "originalId": "CompoundId",
-                          "id": "CompoundId",
-                          "alias": "CompoundId",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
-                          "isCellVisible": false,
-                          "isDerived": false,
-                          "label": "CompoundId",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CompoundId\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "BatchId": {
-                          "allowCellWrapping": false,
-                          "index": 1,
-                          "width": 150,
-                          "originalId": "BatchId",
-                          "id": "BatchId",
-                          "alias": "BatchId",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
-                          "isCellVisible": false,
-                          "isDerived": false,
-                          "label": "BatchId",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
                         },
                         "SACCId": {
                           "allowCellWrapping": false,
@@ -432,34 +364,6 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"InitialAmount\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "CurrentAmountLeft": {
-                          "allowCellWrapping": false,
-                          "index": 5,
-                          "width": 150,
-                          "originalId": "CurrentAmountLeft",
-                          "id": "CurrentAmountLeft",
-                          "alias": "CurrentAmountLeft",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Current Amount Left",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CurrentAmountLeft\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -853,7 +757,7 @@
                       "fontFamily": "Inter",
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 24,
+                      "leftColumn": 17,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -878,11 +782,11 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 11,
+                      "originalTopRow": 12,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 16,
-                      "fontSize": "0.575rem",
+                      "fontSize": "0.775rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -939,15 +843,15 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 1,
-                      "bottomRow": 5,
+                      "topRow": 0,
+                      "bottomRow": 4,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 18,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -964,8 +868,8 @@
                       "text": "Import Compounds",
                       "key": "yed6llcd4m",
                       "isDeprecated": false,
-                      "rightColumn": 31,
-                      "textAlign": "LEFT",
+                      "rightColumn": 48,
+                      "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "zn861t1bfu",
                       "isVisible": true,
@@ -975,9 +879,11 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "fontSize": "1.25rem",
+                      "originalBottomRow": 5,
+                      "fontSize": "1.875rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -1033,7 +939,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "SubmitButton",
-                      "onClick": "{{INSERT_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}",
+                      "onClick": "{{FETCH_COMPOUNDS.run(() => closeModal('AddCompoundsModal'), () => {})}}",
                       "buttonColor": "#1e3a8a",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1091,13 +997,19 @@
                       "topRow": 7,
                       "bottomRow": 11,
                       "parentRowSpace": 10,
-                      "allowedFileTypes": [],
+                      "allowedFileTypes": [
+                        "text/*"
+                      ],
                       "type": "FILE_PICKER_WIDGET_V2",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 23,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFilesSelected"
+                        }
+                      ],
+                      "leftColumn": 17,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -1105,6 +1017,7 @@
                       ],
                       "isDisabled": false,
                       "key": "ghs9dup4tz",
+                      "onFilesSelected": "{{INSERT_COMPOUND_FROM_CSV.run(() => {}, () => {})}}",
                       "isRequired": false,
                       "isDeprecated": false,
                       "rightColumn": 62,
@@ -1112,15 +1025,17 @@
                       "widgetId": "gdythzwcqf",
                       "isVisible": true,
                       "label": "Upload CSV",
-                      "maxFileSize": 5,
+                      "maxFileSize": "5",
                       "dynamicTyping": true,
                       "version": 1,
-                      "fileDataType": "Base64",
+                      "fileDataType": "Text",
                       "parentId": "tkvfe2y4tl",
                       "selectedFiles": [],
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 8,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 12,
                       "files": [],
                       "maxNumFiles": 1
                     },
@@ -1133,23 +1048,20 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 7,
-                      "bottomRow": 11,
+                      "topRow": 8,
+                      "bottomRow": 12,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "fontFamily": "System Default",
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
-                        },
-                        {
-                          "key": "fontFamily"
                         },
                         {
                           "key": "borderRadius"
@@ -1160,22 +1072,22 @@
                       "text": "Add compounds",
                       "key": "yed6llcd4m",
                       "isDeprecated": false,
-                      "rightColumn": 22,
+                      "rightColumn": 15,
                       "textAlign": "LEFT",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "sgcryi0jt9",
                       "isVisible": true,
-                      "fontStyle": "",
+                      "fontStyle": "BOLD",
                       "textColor": "#231F20",
                       "version": 1,
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 6,
+                      "originalTopRow": 7,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 10,
-                      "fontSize": "0.875rem",
+                      "originalBottomRow": 12,
+                      "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -1207,7 +1119,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "width": 458,
+              "width": 616,
               "minDynamicHeight": 24
             }
           ]
