@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 990,
+          "bottomRow": 830,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -315,7 +315,7 @@
                 "group"
               ],
               "topRow": 22,
-              "bottomRow": 91,
+              "bottomRow": 75,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -337,12 +337,12 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 710,
+                  "bottomRow": 530,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 690,
+                  "minHeight": 530,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -498,7 +498,7 @@
                       ],
                       "compactMode": "TALL",
                       "displayName": "Table",
-                      "bottomRow": 69,
+                      "bottomRow": 52,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -795,7 +795,7 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_BATCH.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
+                          "onSave": "{{UPDATE_BATCH.run(() => FETCH_BATCH.run(), () => showAlert('Something went wrong!','error'))}}"
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,

@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "FETCH_BATCH_DETAILS",
+    "name": "FETCH_CHECKOUT",
     "datasource": {
       "name": "CompoundTrackerDB",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "CheckOut",
+    "pageId": "BatchOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -33,10 +33,7 @@
           }
         },
         "projection": {
-          "data": [
-            "BatchId",
-            "Scientist"
-          ]
+          "data": []
         },
         "queryFormat": {
           "data": "ROWS"
@@ -45,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "Batch"
+          "data": "Checkout"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1jiLbMjsGujzWLdJlW3xGoo449yMC3iKz1UN7tmfrOTc/edit"
@@ -69,9 +66,7 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "EQ",
-                "key": "BatchId",
-                "value": "{{CheckOutTable.selectedRow.BatchId}}"
+                "condition": "LT"
               }
             ]
           }
@@ -79,23 +74,17 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.where.data.children[0].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "CheckOutTable.selectedRow.BatchId"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CheckOut_FETCH_BATCH_DETAILS",
+  "id": "BatchOrder_FETCH_CHECKOUT",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ed837ca01b764626f27bf3"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63efd38ad616db68c3d45271"
 }

@@ -531,16 +531,16 @@
                         "Location",
                         "Scientist",
                         "Project",
+                        "customColumn2",
+                        "customColumn1",
                         "IsPhysicallyReceived",
                         "ReceivedDate",
                         "IsCDDRegistered",
                         "CDDRegisteredDate",
                         "CDDImportFileName",
                         "IsInitialCheckedOut",
-                        "rowIndex",
                         "EditActions1",
-                        "customColumn2",
-                        "customColumn1"
+                        "rowIndex"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -923,8 +923,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Is Initial Checked Out",
@@ -2177,18 +2177,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "BatchOrder_FETCH_BATCH",
-              "name": "FETCH_BATCH",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.OrderId"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "BatchOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
@@ -2210,6 +2198,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "BatchOrder_FETCH_BATCH",
+              "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.OrderId"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
