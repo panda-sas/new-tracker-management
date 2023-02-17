@@ -135,9 +135,6 @@
                           "key": "boxShadow"
                         },
                         {
-                          "key": "tableData"
-                        },
-                        {
                           "key": "primaryColumns.EditActions1.saveBorderRadius"
                         },
                         {
@@ -160,6 +157,18 @@
                         },
                         {
                           "key": "primaryColumns.rowIndex.computedValue"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.CurrentAmountLeft.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.CompoundId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.BatchId.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -207,8 +216,11 @@
                         "SACCId",
                         "Concentration",
                         "InitialAmount",
+                        "CurrentAmountLeft",
                         "EditActions1",
-                        "rowIndex"
+                        "rowIndex",
+                        "CompoundId",
+                        "BatchId"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -283,7 +295,7 @@
                           "onSave": "{{UPDATE_COMPOUND.run(() => showAlert('Saved!','success'), () => showAlert('Something went wrong!','error'))}}"
                         },
                         "SACCId": {
-                          "allowCellWrapping": false,
+                          "allowCellWrapping": true,
                           "index": 2,
                           "width": 150,
                           "originalId": "SACCId",
@@ -392,6 +404,90 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "CurrentAmountLeft": {
+                          "allowCellWrapping": false,
+                          "index": 3,
+                          "width": 150,
+                          "originalId": "CurrentAmountLeft",
+                          "id": "CurrentAmountLeft",
+                          "alias": "CurrentAmountLeft",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "CurrentAmountLeft",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CurrentAmountLeft\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "CompoundId": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "CompoundId",
+                          "id": "CompoundId",
+                          "alias": "CompoundId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "CompoundId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CompoundId\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "BatchId": {
+                          "allowCellWrapping": false,
+                          "index": 1,
+                          "width": 150,
+                          "originalId": "BatchId",
+                          "id": "BatchId",
+                          "alias": "BatchId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "BatchId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
@@ -782,10 +878,10 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 12,
+                      "originalTopRow": 11,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 16,
+                      "originalBottomRow": 15,
                       "fontSize": "0.775rem",
                       "minDynamicHeight": 4
                     },
@@ -882,7 +978,7 @@
                       "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 5,
+                      "originalBottomRow": 4,
                       "fontSize": "1.875rem",
                       "minDynamicHeight": 4
                     },
@@ -928,10 +1024,10 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 18,
+                      "originalTopRow": 17,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 22,
+                      "originalBottomRow": 21,
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
@@ -977,10 +1073,10 @@
                       "parentId": "tkvfe2y4tl",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 18,
+                      "originalTopRow": 17,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 22,
+                      "originalBottomRow": 21,
                       "buttonVariant": "PRIMARY",
                       "iconAlign": "left",
                       "placement": "CENTER"
@@ -1033,9 +1129,9 @@
                       "selectedFiles": [],
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 8,
+                      "originalTopRow": 7,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 12,
+                      "originalBottomRow": 11,
                       "files": [],
                       "maxNumFiles": 1
                     },

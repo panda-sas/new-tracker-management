@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{UploadCSVHelper.csvJSON(UploadCSVFilePicker.files[0].data)}}\n\n\n"
+          "data": "{{UploadCSVHelper.csv2JSON(UploadCSVFilePicker.files[0].data)}}\n\n\n"
         },
         "sheetName": {
           "data": "TestCompound"
@@ -73,7 +73,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "UploadCSVHelper.csvJSON(UploadCSVFilePicker.files[0].data)"
+      "UploadCSVHelper.csv2JSON(UploadCSVFilePicker.files[0].data)"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
