@@ -40,7 +40,8 @@
             "TrackingID",
             "NoOfShipments",
             "isComplete",
-            "OrderId"
+            "OrderId",
+            "Comments"
           ]
         },
         "queryFormat": {

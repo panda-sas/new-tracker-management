@@ -43,7 +43,8 @@
             "CDDImportFileName",
             "IsPhysicallyReceived",
             "IsCDDRegistered",
-            "IsInitialCheckedOut"
+            "IsInitialCheckedOut",
+            "Comments"
           ]
         },
         "queryFormat": {

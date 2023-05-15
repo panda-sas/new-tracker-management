@@ -33,7 +33,9 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "Dispatcher"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"

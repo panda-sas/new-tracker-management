@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 830,
+          "bottomRow": 750,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 76,
+          "version": 79,
           "minHeight": 820,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -58,7 +58,7 @@
                   "widgetName": "Canvas113Copy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -423,6 +423,9 @@
                         },
                         {
                           "key": "primaryColumns.IsInitialCheckedOut.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Comments.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -461,6 +464,7 @@
                         }
                       },
                       "borderRadius": "0px",
+                      "columnUpdatedAt": 1684169068626,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -480,7 +484,8 @@
                         "CDDRegisteredDate",
                         "CDDImportFileName",
                         "EditActions1",
-                        "rowIndex"
+                        "rowIndex",
+                        "Comments"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -560,7 +565,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Target\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "Location": {
                           "allowCellWrapping": true,
@@ -588,7 +594,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Location\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "Scientist": {
                           "allowCellWrapping": false,
@@ -616,7 +623,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Scientist\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "Project": {
                           "allowCellWrapping": true,
@@ -644,7 +652,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Project\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "ReceivedDate": {
                           "allowCellWrapping": false,
@@ -674,7 +683,8 @@
                           "validation": {},
                           "cellBackground": "",
                           "inputFormat": "MM/DD/YYYY",
-                          "outputFormat": "MM/DD/YYYY"
+                          "outputFormat": "MM/DD/YYYY",
+                          "sticky": ""
                         },
                         "CDDRegisteredDate": {
                           "allowCellWrapping": false,
@@ -704,7 +714,8 @@
                           "validation": {},
                           "cellBackground": "",
                           "inputFormat": "MM/DD/YYYY",
-                          "outputFormat": "MM/DD/YYYY"
+                          "outputFormat": "MM/DD/YYYY",
+                          "sticky": ""
                         },
                         "CDDImportFileName": {
                           "allowCellWrapping": true,
@@ -732,7 +743,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CDDImportFileName\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "rowIndex": {
                           "allowCellWrapping": false,
@@ -760,7 +772,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "EditActions1": {
                           "allowCellWrapping": false,
@@ -795,7 +808,8 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_BATCH.run(() => FETCH_BATCH.run(), () => showAlert('Something went wrong!','error'))}}"
+                          "onSave": "{{UPDATE_BATCH.run(() => FETCH_BATCH.run(), () => showAlert('Something went wrong!','error'))}}",
+                          "sticky": ""
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
@@ -829,7 +843,8 @@
                           "customAlias": "",
                           "buttonLabel": "Check Out",
                           "buttonVariant": "PRIMARY",
-                          "onClick": "{{showModal('CheckOutModal',{BatchId:OpenBatchTable.selectedRow.BatchId})}}/"
+                          "onClick": "{{showModal('CheckOutModal',{BatchId:OpenBatchTable.selectedRow.BatchId})}}/",
+                          "sticky": ""
                         },
                         "customColumn2": {
                           "allowCellWrapping": false,
@@ -862,7 +877,8 @@
                           "boxShadow": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "Add/View Compounds",
-                          "onClick": "{{navigateTo('AllCompounds',{BatchId: OpenBatchTable.selectedRow.BatchId,\t\t\t\t\t\t\t\t\t\"Target\" : OpenBatchTable.selectedRow.Target,\"Scientist\" : OpenBatchTable.selectedRow.Scientist}, 'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('AllCompounds',{BatchId: OpenBatchTable.selectedRow.BatchId,\t\t\t\t\t\t\t\t\t\"Target\" : OpenBatchTable.selectedRow.Target,\"Scientist\" : OpenBatchTable.selectedRow.Scientist}, 'SAME_WINDOW')}}",
+                          "sticky": ""
                         },
                         "IsPhysicallyReceived": {
                           "allowCellWrapping": false,
@@ -890,7 +906,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"IsPhysicallyReceived\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "IsCDDRegistered": {
                           "allowCellWrapping": false,
@@ -918,7 +935,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"IsCDDRegistered\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "IsInitialCheckedOut": {
                           "allowCellWrapping": false,
@@ -946,10 +964,42 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"IsInitialCheckedOut\"]))}}",
                           "validation": {},
+                          "cellBackground": "",
+                          "sticky": ""
+                        },
+                        "Comments": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 11,
+                          "width": 150,
+                          "originalId": "Comments",
+                          "id": "Comments",
+                          "alias": "Comments",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Comments",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Comments\"]))}}",
+                          "sticky": "",
+                          "validation": {},
                           "cellBackground": ""
                         }
                       },
                       "key": "j1q6i3sr5l",
+                      "canFreezeColumn": false,
                       "isDeprecated": false,
                       "rightColumn": 64,
                       "textSize": "0.875rem",
@@ -1007,7 +1057,7 @@
                 "notification"
               ],
               "topRow": 14,
-              "bottomRow": 36,
+              "bottomRow": 374,
               "parentRowSpace": 10,
               "type": "MODAL_WIDGET",
               "hideCard": false,
@@ -1475,7 +1525,7 @@
                 }
               ],
               "key": "vjt4yisaoe",
-              "height": 380,
+              "height": 360,
               "isDeprecated": false,
               "rightColumn": 43,
               "detachFromLayout": true,
