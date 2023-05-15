@@ -19,7 +19,6 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  INSERT_NEW_ORDER.run(() => {\n    showAlert(\"Submitted!\", \"success\");\n    SELECT_OPEN_ORDERS.run(() => closeModal('AddOrderModal'), () => showAlert('Something went wrong while fetching orders!'));\n  }, () => showAlert(\"Something went wrong while inserting order!\", \"error\"));\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -33,9 +32,6 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "() => {\n  INSERT_NEW_ORDER.run(() => {\n    showAlert(\"Submitted!\", \"success\");\n    SELECT_OPEN_ORDERS.run(() => closeModal('AddOrderModal'), () => showAlert('Something went wrong while fetching orders!'));\n  }, () => showAlert(\"Something went wrong while inserting order!\", \"error\"));\n}"
-    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

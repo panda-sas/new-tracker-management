@@ -13,13 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllOrders",
-    "collectionId": "AllOrders_Generator",
+    "pageId": "AllCompounds",
+    "collectionId": "AllCompounds_Generator",
     "actionConfiguration": {
       "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let prefix;\n  let d = new Date().getTime();\n  d += parseInt(Math.random() * 100).toString();\n  if (undefined === prefix) {\n    prefix = 'uid-';\n  }\n  d = prefix + d;\n  return d;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -33,15 +32,12 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "() => {\n  let prefix;\n  let d = new Date().getTime();\n  d += parseInt(Math.random() * 100).toString();\n  if (undefined === prefix) {\n    prefix = 'uid-';\n  }\n  d = prefix + d;\n  return d;\n}"
-    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllOrders_Generator.getUUID",
+  "id": "AllCompounds_Generator.getUUID",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ebfb093d6355314505f1ef"
+  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ec46d4a01b764626f25fe0"
 }
