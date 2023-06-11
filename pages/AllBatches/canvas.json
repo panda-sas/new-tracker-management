@@ -429,6 +429,9 @@
                         },
                         {
                           "key": "primaryColumns.Scientist.selectOptions"
+                        },
+                        {
+                          "key": "primaryColumns.BatchId.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -467,7 +470,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1684169068626,
+                      "columnUpdatedAt": 1686521225878,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -488,7 +491,8 @@
                         "CDDImportFileName",
                         "EditActions1",
                         "rowIndex",
-                        "Comments"
+                        "Comments",
+                        "BatchId"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -844,7 +848,7 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_BATCH.run().then(() => {\n  showAlert('Saved', 'success');\n  FETCH_ALL_BATCHES.run();\n  BatchRecordChanged.run({}).then(() => {\n    showAlert('Email Sent');\n      // \n    // \n}).catch(() => {\n    showAlert('Failed sending email.');\n  });\n}).catch(() => {\n  showAlert('Failed', 'error');\n});}}",
+                          "onSave": "{{UPDATE_BATCH.run().then(() => {\n  showAlert('Saved!', 'success');\n  FETCH_ALL_BATCHES.run();\n  BatchRecordChanged.run({}).then(() => {\n    showAlert('Notification Sent');\n  }).catch(() => {\n    showAlert('Failed sending email.');\n  });\n}).catch(() => {\n  showAlert('Failed!', 'error');\n});}}",
                           "sticky": ""
                         },
                         "customColumn1": {
@@ -973,7 +977,7 @@
                           "validation": {},
                           "cellBackground": "",
                           "sticky": "",
-                          "onCheckChange": "{{showAlert('Project is ' + OpenBatchTable.selectedRow.Project, 'info');}}",
+                          "onCheckChange": "",
                           "customAlias": "",
                           "onClick": "{{showAlert('{{}}', '');}}"
                         },
@@ -1032,6 +1036,36 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Comments\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "BatchId": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 12,
+                          "width": 150,
+                          "originalId": "BatchId",
+                          "id": "BatchId",
+                          "alias": "BatchId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "BatchId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
@@ -1096,12 +1130,12 @@
                 "notification"
               ],
               "topRow": 14,
-              "bottomRow": 374,
+              "bottomRow": 414,
               "parentRowSpace": 10,
               "type": "MODAL_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
-              "minHeight": 380,
+              "minHeight": 400,
               "animateLoading": true,
               "parentColumnSpace": 19.75,
               "leftColumn": 19,
@@ -1115,7 +1149,7 @@
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 360,
+                  "bottomRow": 400,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -1143,8 +1177,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 30,
-                      "bottomRow": 34,
+                      "topRow": 34,
+                      "bottomRow": 38,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -1172,10 +1206,10 @@
                       "parentId": "rhgxdf33bc",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 34,
+                      "originalTopRow": 30,
                       "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 38,
+                      "originalBottomRow": 34,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -1191,8 +1225,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 30,
-                      "bottomRow": 34,
+                      "topRow": 34,
+                      "bottomRow": 38,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -1220,10 +1254,10 @@
                       "parentId": "rhgxdf33bc",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 34,
+                      "originalTopRow": 30,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 38,
+                      "originalBottomRow": 34,
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
@@ -1239,7 +1273,7 @@
                         "textarea"
                       ],
                       "topRow": 25,
-                      "bottomRow": 29,
+                      "bottomRow": 33,
                       "parentRowSpace": 10,
                       "labelWidth": "22",
                       "autoFocus": false,
@@ -1281,7 +1315,7 @@
                       "originalTopRow": 25,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 33,
+                      "originalBottomRow": 29,
                       "iconAlign": "left",
                       "defaultText": "",
                       "minDynamicHeight": 4
@@ -1564,7 +1598,7 @@
                 }
               ],
               "key": "vjt4yisaoe",
-              "height": 360,
+              "height": 400,
               "isDeprecated": false,
               "rightColumn": 43,
               "detachFromLayout": true,

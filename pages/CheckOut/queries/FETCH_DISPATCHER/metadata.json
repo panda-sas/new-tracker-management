@@ -33,7 +33,11 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "BatchId",
+            "Scientist",
+            "Comments"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"
@@ -66,7 +70,9 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "LT"
+                "condition": "EQ",
+                "key": "BatchId",
+                "value": "{{CheckOutTable.selectedRow.BatchId}}"
               }
             ]
           }
@@ -74,11 +80,17 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "CheckOutTable.selectedRow.BatchId"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

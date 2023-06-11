@@ -34,11 +34,12 @@
         },
         "projection": {
           "data": [
+            "CheckOutId",
+            "BatchId",
             "Scientist",
             "CheckoutDate",
             "TentativeReturnDate",
-            "BatchId",
-            "CheckOutId"
+            "Comments"
           ]
         },
         "queryFormat": {

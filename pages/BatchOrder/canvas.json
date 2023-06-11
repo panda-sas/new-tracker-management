@@ -481,6 +481,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.Comments.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -519,7 +522,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1684169156971,
+                      "columnUpdatedAt": 1686521399431,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -541,7 +544,8 @@
                         "CDDImportFileName",
                         "IsInitialCheckedOut",
                         "EditActions1",
-                        "rowIndex"
+                        "rowIndex",
+                        "Comments"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1080,6 +1084,36 @@
                           "buttonLabel": "Add/View Compounds",
                           "onClick": "{{navigateTo('AllCompounds',{BatchId: OpenBatchTable.selectedRow.BatchId,\t\t\t\t\t\t\t\t\t\"Target\" : OpenBatchTable.selectedRow.Target,\"Scientist\" : OpenBatchTable.selectedRow.Scientist}, 'SAME_WINDOW')}}",
                           "sticky": ""
+                        },
+                        "Comments": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 12,
+                          "width": 150,
+                          "originalId": "Comments",
+                          "id": "Comments",
+                          "alias": "Comments",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Comments",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Comments\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "j1q6i3sr5l",
@@ -1286,7 +1320,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
@@ -2195,18 +2229,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "BatchOrder_FETCH_BATCH",
-              "name": "FETCH_BATCH",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.OrderId"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "BatchOrder_FETCH_PROJECTS",
               "name": "FETCH_PROJECTS",
               "confirmBeforeExecute": false,
@@ -2228,6 +2250,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "BatchOrder_FETCH_BATCH",
+              "name": "FETCH_BATCH",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.OrderId"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

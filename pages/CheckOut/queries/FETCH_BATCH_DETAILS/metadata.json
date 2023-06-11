@@ -35,7 +35,18 @@
         "projection": {
           "data": [
             "BatchId",
-            "Scientist"
+            "Scientist",
+            "Project",
+            "ReceivedDate",
+            "CDDRegisteredDate",
+            "CDDImportFileName",
+            "IsPhysicallyReceived",
+            "IsCDDRegistered",
+            "IsInitialCheckedOut",
+            "Comments",
+            "Target",
+            "Location",
+            "OrderId"
           ]
         },
         "queryFormat": {

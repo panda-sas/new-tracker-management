@@ -36,7 +36,8 @@
           "data": [
             "OrderId",
             "Scientist",
-            "Dispatcher"
+            "Dispatcher",
+            "Comments"
           ]
         },
         "queryFormat": {
