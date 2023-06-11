@@ -1,0 +1,1 @@
+{{SNetEmail.format("Target " + OpenBatchTable.selectedRow.Target + " of project " + OpenBatchTable.selectedRow.Project + " has been updated.")}}

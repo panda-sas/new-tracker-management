@@ -419,13 +419,16 @@
                           "key": "primaryColumns.IsPhysicallyReceived.computedValue"
                         },
                         {
-                          "key": "primaryColumns.IsCDDRegistered.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.IsInitialCheckedOut.computedValue"
                         },
                         {
                           "key": "primaryColumns.Comments.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.IsCDDRegistered.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Scientist.selectOptions"
                         }
                       ],
                       "leftColumn": 0,
@@ -535,6 +538,12 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "primaryColumns.IsCDDRegistered.onCheckChange"
+                        },
+                        {
+                          "key": "primaryColumns.IsCDDRegistered.onClick"
                         }
                       ],
                       "borderWidth": "1",
@@ -606,7 +615,7 @@
                           "alias": "Scientist",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "select",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -624,7 +633,34 @@
                           "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Scientist\"]))}}",
                           "validation": {},
                           "cellBackground": "",
-                          "sticky": ""
+                          "sticky": "",
+                          "customAlias": "",
+                          "menuItemsSource": "STATIC",
+                          "sourceData": [],
+                          "configureMenuItems": {
+                            "label": "Configure Menu Items",
+                            "id": "config",
+                            "config": {
+                              "id": "config",
+                              "label": "Menu Item",
+                              "isVisible": true,
+                              "isDisabled": false
+                            }
+                          },
+                          "menuItems": {
+                            "menuItemtktbnx96ne": {
+                              "id": "menuItemtktbnx96ne",
+                              "index": 0,
+                              "label": "Menu Item 1",
+                              "widgetId": "55di0bkyos",
+                              "isDisabled": false,
+                              "isVisible": true
+                            }
+                          },
+                          "selectOptions": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( FETCH_SCIENTISTS.data.map(d => (\n\t{\n\t\t\"label\" :d.ScientistName,\n\t\t\"value\": d.ScientistName\n\t}\n)\n)))}}",
+                          "placeholderText": "Select Scientist",
+                          "isFilterable": true,
+                          "resetFilterTextOnClose": true
                         },
                         "Project": {
                           "allowCellWrapping": true,
@@ -808,7 +844,7 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( !OpenBatchTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_BATCH.run(() => FETCH_BATCH.run(), () => showAlert('Something went wrong!','error'))}}",
+                          "onSave": "{{UPDATE_BATCH.run().then(() => {\n  showAlert('Saved', 'success');\n  FETCH_ALL_BATCHES.run();\n  BatchRecordChanged.run({}).then(() => {\n    showAlert('Email Sent');\n      // \n    // \n}).catch(() => {\n    showAlert('Failed sending email.');\n  });\n}).catch(() => {\n  showAlert('Failed', 'error');\n});}}",
                           "sticky": ""
                         },
                         "customColumn1": {
@@ -926,17 +962,20 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Registered in CDD?",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"IsCDDRegistered\"]))}}",
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.IsCDDRegistered))}}",
                           "validation": {},
                           "cellBackground": "",
-                          "sticky": ""
+                          "sticky": "",
+                          "onCheckChange": "{{showAlert('Project is ' + OpenBatchTable.selectedRow.Project, 'info');}}",
+                          "customAlias": "",
+                          "onClick": "{{showAlert('{{}}', '');}}"
                         },
                         "IsInitialCheckedOut": {
                           "allowCellWrapping": false,

@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 980,
+          "bottomRow": 900,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 76,
+          "version": 79,
           "minHeight": 820,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -60,7 +60,7 @@
                   "widgetName": "Canvas114",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 680,
+                  "bottomRow": 690,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -207,6 +207,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "columnUpdatedAt": 1686501932008,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -292,7 +293,8 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( !AllCompoundsTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{UPDATE_COMPOUND.run(() => FETCH_COMPOUNDS.run(), () => showAlert('Something went wrong!','error'))}}"
+                          "onSave": "{{UPDATE_COMPOUND.run(() => FETCH_COMPOUNDS.run(), () => showAlert('Something went wrong!','error'))}}",
+                          "sticky": ""
                         },
                         "CompoundId": {
                           "allowCellWrapping": false,
@@ -320,7 +322,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CompoundId\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "BatchId": {
                           "allowCellWrapping": false,
@@ -348,7 +351,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "SACCId": {
                           "allowCellWrapping": false,
@@ -376,7 +380,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SACCId\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "Concentration": {
                           "allowCellWrapping": false,
@@ -405,7 +410,8 @@
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Concentration\"]))}}",
                           "validation": {},
                           "cellBackground": "",
-                          "onSubmit": ""
+                          "onSubmit": "",
+                          "sticky": ""
                         },
                         "InitialAmount": {
                           "allowCellWrapping": false,
@@ -433,7 +439,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"InitialAmount\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "CurrentAmountLeft": {
                           "allowCellWrapping": false,
@@ -461,7 +468,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CurrentAmountLeft\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "rowIndex": {
                           "allowCellWrapping": false,
@@ -489,10 +497,12 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{AllCompoundsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         }
                       },
                       "key": "pa1raiidba",
+                      "canFreezeColumn": false,
                       "isDeprecated": false,
                       "rightColumn": 63,
                       "textSize": "0.875rem",
@@ -571,7 +581,7 @@
                   "widgetName": "Canvas113",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -872,7 +882,7 @@
                 "notification"
               ],
               "topRow": 3,
-              "bottomRow": 24,
+              "bottomRow": 243,
               "parentRowSpace": 10,
               "type": "MODAL_WIDGET",
               "hideCard": false,
@@ -1277,7 +1287,7 @@
                 }
               ],
               "key": "ryebgct39s",
-              "height": 260,
+              "height": 240,
               "isDeprecated": false,
               "rightColumn": 39,
               "detachFromLayout": true,

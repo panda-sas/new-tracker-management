@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getUUID",
-    "fullyQualifiedName": "Generator.getUUID",
+    "name": "format",
+    "fullyQualifiedName": "SNetEmail.format",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,17 +13,22 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "AllOrders",
-    "collectionId": "AllOrders_Generator",
+    "pageId": "AllBatches",
+    "collectionId": "AllBatches_SNetEmail",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "message"
+        }
+      ],
       "isAsync": false
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -37,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "AllOrders_Generator.getUUID",
+  "id": "AllBatches_SNetEmail.format",
   "deleted": false,
-  "gitSyncId": "63ebd5c8a01b764626f25a3c_63ebfb093d6355314505f1ef"
+  "gitSyncId": "6485e721ede8e07d8882fa73_648606d7ede8e07d8882fb3b"
 }

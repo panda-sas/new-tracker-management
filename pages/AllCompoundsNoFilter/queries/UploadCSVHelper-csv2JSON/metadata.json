@@ -21,8 +21,12 @@
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
       "jsArguments": [
-        {},
-        {}
+        {
+          "name": "strData"
+        },
+        {
+          "name": "strDelimiter"
+        }
       ],
       "isAsync": false
     },

@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1330,
+          "bottomRow": 1250,
           "containerStyle": "none",
           "snapRows": 75,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 76,
+          "version": 79,
           "minHeight": 760,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -344,7 +344,7 @@
                   "widgetName": "Canvas114",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1040,
+                  "bottomRow": 1050,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1459,7 +1459,7 @@
                           "widgetName": "Canvas115",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 670,
+                          "bottomRow": 680,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -1549,6 +1549,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1686501943691,
                               "primaryColumnId": "CheckOutId",
                               "defaultSelectedRowIndices": [
                                 0
@@ -1629,7 +1630,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Scientist\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "CheckoutDate": {
                                   "allowCellWrapping": false,
@@ -1659,7 +1661,8 @@
                                   "validation": {},
                                   "cellBackground": "",
                                   "inputFormat": "MM/DD/YYYY",
-                                  "outputFormat": "MM/DD/YYYY"
+                                  "outputFormat": "MM/DD/YYYY",
+                                  "sticky": ""
                                 },
                                 "TentativeReturnDate": {
                                   "allowCellWrapping": false,
@@ -1689,7 +1692,8 @@
                                   "validation": {},
                                   "cellBackground": "",
                                   "inputFormat": "MM/DD/YYYY",
-                                  "outputFormat": "MM/DD/YYYY"
+                                  "outputFormat": "MM/DD/YYYY",
+                                  "sticky": ""
                                 },
                                 "rowIndex": {
                                   "allowCellWrapping": false,
@@ -1717,7 +1721,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "BatchId": {
                                   "allowCellWrapping": false,
@@ -1745,7 +1750,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "CheckOutId": {
                                   "allowCellWrapping": true,
@@ -1773,12 +1779,14 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CheckOutId\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 }
                               },
                               "onRowSelected": "{{BatchWidgetFuncs.updateBatchDetailsContainer()}}",
                               "defaultSearchText": "",
                               "key": "bpzxwnwf14",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 63,
                               "textSize": "0.875rem",

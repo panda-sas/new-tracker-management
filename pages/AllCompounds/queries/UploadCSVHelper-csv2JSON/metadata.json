@@ -16,11 +16,18 @@
     "pageId": "AllCompounds",
     "collectionId": "AllCompounds_UploadCSVHelper",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "strData"
+        },
+        {
+          "name": "strDelimiter"
+        }
+      ],
       "isAsync": false
     },
     "executeOnLoad": false,
