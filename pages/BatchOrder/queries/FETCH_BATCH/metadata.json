@@ -33,7 +33,10 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "OrderId",
+            "Scientist"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"

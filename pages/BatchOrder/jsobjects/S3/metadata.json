@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "S3",
+    "pageId": "BatchOrder",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "BatchOrder_S3",
+  "deleted": false,
+  "gitSyncId": "6485e721ede8e07d8882fa73_6486532ca63f2b2782ff4beb"
+}

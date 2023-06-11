@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "amazons3-plugin",
   "unpublishedAction": {
-    "name": "UploadPlateMapFile",
+    "name": "ListBucket",
     "datasource": {
       "name": "S3-AppSmith-CompoundTra-Bucket",
       "pluginId": "amazons3-plugin",
@@ -21,13 +21,13 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "body": {
-          "data": "{{PlateMapFilePicker.files[0]}}"
+          "data": ""
         },
         "bucket": {
           "data": "appsmith-compound-tracker-data"
         },
         "command": {
-          "data": "UPLOAD_FILE_FROM_BODY"
+          "data": "LIST"
         },
         "create": {
           "dataType": {
@@ -70,7 +70,7 @@
           }
         },
         "path": {
-          "data": "{{S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue)}}"
+          "data": ""
         },
         "read": {
           "dataType": {
@@ -83,27 +83,17 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.body.data"
-      },
-      {
-        "key": "formData.path.data"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "PlateMapFilePicker.files[0]",
-      "S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue)"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "BatchOrder_UploadPlateMapFile",
+  "id": "BatchOrder_ListBucket",
   "deleted": false,
-  "gitSyncId": "6485e721ede8e07d8882fa73_64864cb5a63f2b2782ff4b82"
+  "gitSyncId": "6485e721ede8e07d8882fa73_64865b19a63f2b2782ff4bfd"
 }
