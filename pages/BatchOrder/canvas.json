@@ -451,6 +451,27 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.buttonColor"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.S3PlateMapLocation.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Target.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.BatchId.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -489,7 +510,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1686526404300,
+                      "columnUpdatedAt": 1686583920819,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -501,7 +522,11 @@
                         "customColumn2",
                         "customColumn1",
                         "EditActions1",
-                        "rowIndex"
+                        "customColumn3",
+                        "rowIndex",
+                        "S3PlateMapLocation",
+                        "Target",
+                        "BatchId"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -515,6 +540,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.onClick"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.isCellVisible"
                         }
                       ],
                       "compactMode": "TALL",
@@ -551,6 +579,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.onClick"
                         }
                       ],
                       "borderWidth": "1",
@@ -746,6 +777,131 @@
                           "buttonLabel": "Add/View Compounds",
                           "onClick": "{{navigateTo('AllCompounds',{BatchId: OpenBatchTable.selectedRow.BatchId,\t\t\t\t\t\t\t\t\t\"Target\" : OpenBatchTable.selectedRow.Target,\"Scientist\" : OpenBatchTable.selectedRow.Scientist}, 'SAME_WINDOW')}}",
                           "sticky": ""
+                        },
+                        "customColumn3": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 6,
+                          "width": 150,
+                          "originalId": "customColumn3",
+                          "id": "customColumn3",
+                          "alias": "Attach Plate map",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "button",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.S3PlateMapLocation == \"\"))}}",
+                          "isDerived": true,
+                          "label": "Attach Plate map",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "sticky": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+                          "borderRadius": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+                          "boxShadow": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+                          "customAlias": "",
+                          "buttonLabel": "Upload",
+                          "onClick": "{{showModal('UploadFileRow');}}"
+                        },
+                        "S3PlateMapLocation": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 3,
+                          "width": 150,
+                          "originalId": "S3PlateMapLocation",
+                          "id": "S3PlateMapLocation",
+                          "alias": "S3PlateMapLocation",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "S3PlateMapLocation",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"S3PlateMapLocation\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Target": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "Target",
+                          "id": "Target",
+                          "alias": "Target",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "Target",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Target\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "BatchId": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 5,
+                          "width": 150,
+                          "originalId": "BatchId",
+                          "id": "BatchId",
+                          "alias": "BatchId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": false,
+                          "isDerived": false,
+                          "label": "BatchId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"BatchId\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "j1q6i3sr5l",
@@ -1857,6 +2013,312 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "width": 456,
+              "minDynamicHeight": 24
+            },
+            {
+              "boxShadow": "none",
+              "mobileBottomRow": 0,
+              "widgetName": "UploadFileRow",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e9a961fb0bfb4e38de7ecc7c5.svg",
+              "searchTags": [
+                "dialog",
+                "popup",
+                "notification"
+              ],
+              "topRow": 0,
+              "bottomRow": 240,
+              "parentRowSpace": 1,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "mobileRightColumn": 0,
+              "animateLoading": true,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "children": [
+                {
+                  "mobileBottomRow": 0,
+                  "widgetName": "Canvas4",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 240,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 0,
+                  "mobileRightColumn": 0,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "mobileBottomRow": 4,
+                      "widgetName": "IconButton1",
+                      "onClick": "{{closeModal('UploadFileRow');}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "mobileRightColumn": 64,
+                      "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 58,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "iconSize": 24,
+                      "isDisabled": false,
+                      "key": "pfyw0ecb9d",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "mhot5e96wi",
+                      "minWidth": 50,
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "60zvxhd4ld",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "mobileTopRow": 0,
+                      "responsiveBehavior": "hug",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "mobileLeftColumn": 58,
+                      "buttonVariant": "TERTIARY"
+                    },
+                    {
+                      "mobileBottomRow": 5,
+                      "widgetName": "UploadLabel",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "mobileRightColumn": 41,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "Upload Plate Map",
+                      "key": "3z1hisl4ta",
+                      "isDeprecated": false,
+                      "rightColumn": 41,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "d24sie6rr9",
+                      "minWidth": 450,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "60zvxhd4ld",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "mobileTopRow": 1,
+                      "responsiveBehavior": "fill",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "mobileLeftColumn": 1,
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.25rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "resetFormOnClick": false,
+                      "boxShadow": "none",
+                      "mobileBottomRow": 22,
+                      "widgetName": "Button1",
+                      "onClick": "{{closeModal('UploadFileRow');}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 17,
+                      "bottomRow": 21,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "mobileRightColumn": 47,
+                      "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 46,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Cancel",
+                      "isDisabled": false,
+                      "key": "he34tb45or",
+                      "isDeprecated": false,
+                      "rightColumn": 62,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "ms5vxcsanf",
+                      "buttonStyle": "PRIMARY",
+                      "minWidth": 120,
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "60zvxhd4ld",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "mobileTopRow": 18,
+                      "responsiveBehavior": "hug",
+                      "disabledWhenInvalid": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "mobileLeftColumn": 31,
+                      "buttonVariant": "SECONDARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "mobileBottomRow": 12,
+                      "widgetName": "plateMapRowFilePicker",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "FilePicker",
+                      "iconSVG": "/static/media/icon.7c5ad9c357928c6ff5701bf51a56c2e5.svg",
+                      "searchTags": [
+                        "upload"
+                      ],
+                      "topRow": 9,
+                      "bottomRow": 14,
+                      "parentRowSpace": 10,
+                      "allowedFileTypes": [],
+                      "type": "FILE_PICKER_WIDGET_V2",
+                      "hideCard": false,
+                      "mobileRightColumn": 34,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFilesSelected"
+                        }
+                      ],
+                      "leftColumn": 9,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "key": "0ka0ks8umg",
+                      "onFilesSelected": "{{UploadPlateMapFileFromRow.run().then(() => {\n  showAlert('Plate Map Uploaded!', 'success');\n  closeModal('');\n}).catch(() => {});\nUPDATE_BATCH.run();\nstoreValue(\"\", \"\")}}",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 55,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "vbkfpwxgda",
+                      "minWidth": 120,
+                      "isVisible": true,
+                      "label": "Select Excel File",
+                      "maxFileSize": 5,
+                      "dynamicTyping": true,
+                      "version": 1,
+                      "fileDataType": "Base64",
+                      "parentId": "60zvxhd4ld",
+                      "selectedFiles": [],
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "mobileTopRow": 8,
+                      "responsiveBehavior": "hug",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "mobileLeftColumn": 18,
+                      "files": [],
+                      "maxNumFiles": 1
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "uartvwtkqc",
+                  "isDeprecated": false,
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "60zvxhd4ld",
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "ds3171fh9d",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 0,
+                  "responsiveBehavior": "fill",
+                  "mobileLeftColumn": 0,
+                  "flexLayers": []
+                }
+              ],
+              "key": "gv4s2ed5gi",
+              "height": 240,
+              "isDeprecated": false,
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "ds3171fh9d",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "mobileTopRow": 0,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
               "width": 456,
               "minDynamicHeight": 24

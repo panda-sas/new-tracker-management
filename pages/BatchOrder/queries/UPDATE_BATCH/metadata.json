@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{...OpenBatchTable.selectedRow }\n}}"
+          "data": "{{\n{\n\t\"S3PlateMapLocation\": OpenBatchTable.selectedRow.S3PlateMapLocation != \"\" && plateMapRowFilePicker.files[0] && S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue),\n\t...OpenBatchTable.selectedRow }\n}}"
         },
         "sheetName": {
           "data": "Batch"
@@ -73,7 +73,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{...OpenBatchTable.selectedRow }\n"
+      "\n{\n\t\"S3PlateMapLocation\": OpenBatchTable.selectedRow.S3PlateMapLocation != \"\" && plateMapRowFilePicker.files[0] && S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue),\n\t...OpenBatchTable.selectedRow }\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

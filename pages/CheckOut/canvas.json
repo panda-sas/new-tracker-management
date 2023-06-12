@@ -414,8 +414,8 @@
                               "searchTags": [
                                 "calendar"
                               ],
-                              "topRow": 38,
-                              "bottomRow": 42,
+                              "topRow": 41,
+                              "bottomRow": 45,
                               "shortcuts": false,
                               "parentRowSpace": 10,
                               "labelWidth": "12",
@@ -453,11 +453,11 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "timePrecision": "minute",
-                              "originalTopRow": 38,
+                              "originalTopRow": 41,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
-                              "originalBottomRow": 42,
+                              "originalBottomRow": 45,
                               "closeOnSelection": true,
                               "minDynamicHeight": 4
                             },
@@ -469,8 +469,8 @@
                               "searchTags": [
                                 "boolean"
                               ],
-                              "topRow": 30,
-                              "bottomRow": 34,
+                              "topRow": 33,
+                              "bottomRow": 37,
                               "parentRowSpace": 10,
                               "type": "SWITCH_WIDGET",
                               "alignWidget": "LEFT",
@@ -500,9 +500,9 @@
                               "parentId": "s19ovdxicp",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 30,
+                              "originalTopRow": 33,
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 34,
+                              "originalBottomRow": 37,
                               "minDynamicHeight": 4
                             },
                             {
@@ -514,7 +514,7 @@
                                 "boolean"
                               ],
                               "topRow": 25,
-                              "bottomRow": 30,
+                              "bottomRow": 33,
                               "parentRowSpace": 10,
                               "type": "SWITCH_WIDGET",
                               "alignWidget": "LEFT",
@@ -546,7 +546,7 @@
                               "isLoading": false,
                               "originalTopRow": 25,
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 30,
+                              "originalBottomRow": 33,
                               "minDynamicHeight": 4
                             },
                             {
@@ -562,8 +562,8 @@
                                 "click",
                                 "submit"
                               ],
-                              "topRow": 59,
-                              "bottomRow": 63,
+                              "topRow": 62,
+                              "bottomRow": 66,
                               "parentRowSpace": 10,
                               "type": "BUTTON_WIDGET",
                               "hideCard": false,
@@ -593,10 +593,10 @@
                               "parentId": "s19ovdxicp",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 59,
+                              "originalTopRow": 62,
                               "disabledWhenInvalid": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 63,
+                              "originalBottomRow": 66,
                               "buttonVariant": "PRIMARY",
                               "iconAlign": "left",
                               "placement": "CENTER"
@@ -1065,8 +1065,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 42,
-                              "bottomRow": 46,
+                              "topRow": 45,
+                              "bottomRow": 49,
                               "parentRowSpace": 10,
                               "labelWidth": "12",
                               "autoFocus": false,
@@ -1105,10 +1105,10 @@
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 42,
+                              "originalTopRow": 45,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 46,
+                              "originalBottomRow": 49,
                               "iconAlign": "left",
                               "defaultText": "",
                               "minDynamicHeight": 4
@@ -1124,8 +1124,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 46,
-                              "bottomRow": 50,
+                              "topRow": 49,
+                              "bottomRow": 53,
                               "parentRowSpace": 10,
                               "labelWidth": "12",
                               "autoFocus": false,
@@ -1164,10 +1164,10 @@
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 46,
+                              "originalTopRow": 49,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 50,
+                              "originalBottomRow": 53,
                               "iconAlign": "left",
                               "defaultText": "",
                               "minDynamicHeight": 4
@@ -1182,8 +1182,8 @@
                               "searchTags": [
                                 "dropdown"
                               ],
-                              "topRow": 50,
-                              "bottomRow": 54,
+                              "topRow": 53,
+                              "bottomRow": 57,
                               "parentRowSpace": 10,
                               "labelWidth": "12",
                               "type": "SELECT_WIDGET",
@@ -1224,10 +1224,10 @@
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 50,
+                              "originalTopRow": 53,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 54,
+                              "originalBottomRow": 57,
                               "minDynamicHeight": 4
                             },
                             {
@@ -1240,8 +1240,8 @@
                               "searchTags": [
                                 "calendar"
                               ],
-                              "topRow": 54,
-                              "bottomRow": 58,
+                              "topRow": 57,
+                              "bottomRow": 61,
                               "shortcuts": false,
                               "parentRowSpace": 10,
                               "labelWidth": "12",
@@ -1279,11 +1279,11 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "timePrecision": "minute",
-                              "originalTopRow": 54,
+                              "originalTopRow": 57,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
-                              "originalBottomRow": 58,
+                              "originalBottomRow": 61,
                               "closeOnSelection": true,
                               "maxDate": "2121-12-31T18:29:00.000Z",
                               "minDynamicHeight": 4
@@ -1343,8 +1343,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 34,
-                              "bottomRow": 38,
+                              "topRow": 37,
+                              "bottomRow": 41,
                               "parentRowSpace": 10,
                               "labelWidth": "12",
                               "autoFocus": false,
@@ -1383,10 +1383,10 @@
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 34,
+                              "originalTopRow": 37,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 38,
+                              "originalBottomRow": 41,
                               "iconAlign": "left",
                               "defaultText": "",
                               "minDynamicHeight": 4
@@ -1500,9 +1500,6 @@
                                   "key": "primaryColumns.CheckoutDate.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.TentativeReturnDate.computedValue"
-                                },
-                                {
                                   "key": "primaryColumns.rowIndex.computedValue"
                                 },
                                 {
@@ -1518,7 +1515,7 @@
                               "leftColumn": 0,
                               "delimiter": ",",
                               "variant": "VARIANT3",
-                              "defaultSelectedRowIndex": "",
+                              "defaultSelectedRowIndex": "0",
                               "showInlineEditingOptionDropdown": true,
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": "true",
@@ -1552,7 +1549,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "columnUpdatedAt": 1686522466664,
+                              "columnUpdatedAt": 1686585560531,
                               "primaryColumnId": "CheckOutId",
                               "defaultSelectedRowIndices": [
                                 0
@@ -1562,7 +1559,6 @@
                               "columnOrder": [
                                 "Scientist",
                                 "CheckoutDate",
-                                "TentativeReturnDate",
                                 "rowIndex",
                                 "BatchId",
                                 "CheckOutId",
@@ -1662,37 +1658,6 @@
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
                                   "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CheckoutDate\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "",
-                                  "inputFormat": "MM/DD/YYYY",
-                                  "outputFormat": "MM/DD/YYYY",
-                                  "sticky": ""
-                                },
-                                "TentativeReturnDate": {
-                                  "allowCellWrapping": false,
-                                  "index": 4,
-                                  "width": 150,
-                                  "originalId": "TentativeReturnDate",
-                                  "id": "TentativeReturnDate",
-                                  "alias": "TentativeReturnDate",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "date",
-                                  "textColor": "",
-                                  "textSize": "0.875rem",
-                                  "fontStyle": "",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "Tentative Return Date",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{CheckOutTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TentativeReturnDate\"]))}}",
                                   "validation": {},
                                   "cellBackground": "",
                                   "inputFormat": "MM/DD/YYYY",
