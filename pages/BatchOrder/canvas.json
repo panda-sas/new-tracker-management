@@ -507,22 +507,22 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1686583920819,
+                      "columnUpdatedAt": 1686873349075,
                       "defaultSelectedRowIndices": [
                         0
                       ],
                       "widgetName": "OpenBatchTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "OrderId",
                         "Scientist",
+                        "Target",
                         "customColumn2",
                         "customColumn1",
                         "EditActions1",
                         "customColumn3",
+                        "OrderId",
                         "rowIndex",
                         "S3PlateMapLocation",
-                        "Target",
                         "BatchId"
                       ],
                       "dynamicPropertyPathList": [
@@ -856,11 +856,11 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
-                          "isCellVisible": false,
+                          "isCellVisible": true,
                           "isDerived": false,
                           "label": "Target",
                           "isSaveVisible": true,
@@ -2257,7 +2257,7 @@
                       ],
                       "isDisabled": false,
                       "key": "0ka0ks8umg",
-                      "onFilesSelected": "{{UploadPlateMapFileFromRow.run().then(() => {\n  showAlert('Plate Map Uploaded!', 'success');\n  closeModal('');\n}).catch(() => {});\nUPDATE_BATCH.run();\nstoreValue(\"\", \"\");\nSendPlateMapFromRow.run()}}",
+                      "onFilesSelected": "{{UploadPlateMapFileFromRow.run().then(() => {\n  showAlert('Notified!', 'success');\n  closeModal('');\n}).catch(() => {});\nUPDATE_BATCH.run();\nstoreValue(\"\", \"\");\nSendPlateMapFromRow.run();}}",
                       "isRequired": false,
                       "isDeprecated": false,
                       "rightColumn": 55,

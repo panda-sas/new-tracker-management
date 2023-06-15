@@ -26,9 +26,7 @@
         "bucket": {
           "data": "appsmith-compound-tracker-data"
         },
-        "command": {
-          "data": "UPLOAD_FILE_FROM_BODY"
-        },
+        "command": "SEND",
         "create": {
           "dataType": {
             "data": "YES"
@@ -70,7 +68,7 @@
           }
         },
         "path": {
-          "data": "{{S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue)}}"
+          "data": "{{S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, OpenBatchTable.selectedRow.Target)}}"
         },
         "read": {
           "dataType": {
@@ -95,7 +93,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue)",
+      "S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, OpenBatchTable.selectedRow.Target)",
       "plateMapRowFilePicker.files[0]"
     ],
     "userSetOnLoad": false,

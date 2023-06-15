@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "{{SNetEmail.format(\"A new plate map is available! \" + S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue))}}",
+      "body": "{{SNetEmail.format(\"A new plate map is available! \" + S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, OpenBatchTable.selectedRow.Target))}}",
       "selfReferencingDataPaths": [],
       "formData": {
         "command": "SEND",
@@ -43,7 +43,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "SNetEmail.format(\"A new plate map is available! \" + S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue))",
+      "SNetEmail.format(\"A new plate map is available! \" + S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, OpenBatchTable.selectedRow.Target))",
       "plateMapRowFilePicker.files"
     ],
     "userSetOnLoad": false,

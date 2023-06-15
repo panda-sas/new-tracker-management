@@ -1,1 +1,1 @@
-{{SNetEmail.format("A new plate map is available! " + S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue))}}
+{{SNetEmail.format("A new plate map is available! " + S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, OpenBatchTable.selectedRow.Target))}}
