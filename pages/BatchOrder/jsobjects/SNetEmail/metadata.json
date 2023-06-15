@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "SNetEmail",
+    "pageId": "BatchOrder",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "BatchOrder_SNetEmail",
+  "deleted": false,
+  "gitSyncId": "6485e721ede8e07d8882fa73_648b9bb0a63f2b2782ff4d5d"
+}

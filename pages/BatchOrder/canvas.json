@@ -453,18 +453,6 @@
                           "key": "primaryColumns.customColumn2.boxShadow"
                         },
                         {
-                          "key": "primaryColumns.customColumn3.buttonColor"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.boxShadow"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.isCellVisible"
-                        },
-                        {
                           "key": "primaryColumns.S3PlateMapLocation.computedValue"
                         },
                         {
@@ -472,6 +460,15 @@
                         },
                         {
                           "key": "primaryColumns.BatchId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.buttonColor"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.boxShadow"
                         }
                       ],
                       "leftColumn": 0,
@@ -796,7 +793,6 @@
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
-                          "isCellVisible": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.S3PlateMapLocation == \"\"))}}",
                           "isDerived": true,
                           "label": "Attach Plate map",
                           "isSaveVisible": true,
@@ -806,12 +802,13 @@
                           "validation": {},
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF",
+                          "customAlias": "",
+                          "buttonLabel": "Upload",
+                          "onClick": "{{showModal('UploadFileRow');}}",
                           "buttonColor": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
                           "borderRadius": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
                           "boxShadow": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-                          "customAlias": "",
-                          "buttonLabel": "Upload",
-                          "onClick": "{{showModal('UploadFileRow');}}"
+                          "isCellVisible": "true"
                         },
                         "S3PlateMapLocation": {
                           "allowCellWrapping": false,
@@ -1419,7 +1416,7 @@
                       "dynamicBindingPathList": [],
                       "isDisabled": false,
                       "key": "2ncckeowt1",
-                      "onFilesSelected": "{{UploadPlateMapFile.run({});}}",
+                      "onFilesSelected": "{{UploadPlateMapFile.run({});\nSendPlateMap.run()}}",
                       "isRequired": false,
                       "isDeprecated": false,
                       "rightColumn": 32,
@@ -2260,7 +2257,7 @@
                       ],
                       "isDisabled": false,
                       "key": "0ka0ks8umg",
-                      "onFilesSelected": "{{UploadPlateMapFileFromRow.run().then(() => {\n  showAlert('Plate Map Uploaded!', 'success');\n  closeModal('');\n}).catch(() => {});\nUPDATE_BATCH.run();\nstoreValue(\"\", \"\")}}",
+                      "onFilesSelected": "{{UploadPlateMapFileFromRow.run().then(() => {\n  showAlert('Plate Map Uploaded!', 'success');\n  closeModal('');\n}).catch(() => {});\nUPDATE_BATCH.run();\nstoreValue(\"\", \"\");\nSendPlateMapFromRow.run()}}",
                       "isRequired": false,
                       "isDeprecated": false,
                       "rightColumn": 55,

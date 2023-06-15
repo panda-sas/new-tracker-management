@@ -26,9 +26,7 @@
         "bucket": {
           "data": "appsmith-compound-tracker-data"
         },
-        "command": {
-          "data": "LIST"
-        },
+        "command": "SEND",
         "create": {
           "dataType": {
             "data": "YES"

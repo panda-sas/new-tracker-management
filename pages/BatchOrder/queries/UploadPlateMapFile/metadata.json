@@ -26,9 +26,7 @@
         "bucket": {
           "data": "appsmith-compound-tracker-data"
         },
-        "command": {
-          "data": "UPLOAD_FILE_FROM_BODY"
-        },
+        "command": "SEND",
         "create": {
           "dataType": {
             "data": "YES"
