@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1080,
+          "bottomRow": 800,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -33,7 +33,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 24,
-              "bottomRow": 108,
+              "bottomRow": 80,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -64,7 +64,7 @@
                   "widgetName": "Canvas111",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 800,
+                  "bottomRow": 780,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -698,7 +698,7 @@
                   "widgetName": "Canvas115",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 800,
+                  "bottomRow": 520,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -716,7 +716,7 @@
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 2,
                       "isSortable": true,
-                      "onPageChange": "{{getAllCustomers.run()}}",
+                      "onPageChange": "",
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
                       "animateLoading": true,
@@ -807,6 +807,15 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "isVisiblePagination"
+                        },
+                        {
+                          "key": "onPageChange"
+                        },
+                        {
+                          "key": "onPageSizeChange"
                         }
                       ],
                       "compactMode": "DEFAULT",
@@ -829,6 +838,7 @@
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
+                      "onPageSizeChange": "",
                       "parentColumnSpace": 17.9375,
                       "dynamicTriggerPathList": [
                         {
@@ -1016,7 +1026,7 @@
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
-                      "isVisiblePagination": true,
+                      "isVisiblePagination": "true",
                       "cellBackground": "",
                       "verticalAlignment": "CENTER"
                     }
