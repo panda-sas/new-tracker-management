@@ -140,7 +140,7 @@
                         "menuItem7wmy9eec0t": {
                           "id": "menuItem7wmy9eec0t",
                           "index": 2,
-                          "label": "Batches",
+                          "label": "Projects",
                           "widgetId": "vd5d8xe2ez",
                           "isDisabled": false,
                           "isVisible": true,
@@ -236,8 +236,8 @@
                       ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 5,
-                      "bottomRow": 9,
+                      "topRow": 3,
+                      "bottomRow": 10,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -253,7 +253,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Batch Details ",
+                      "text": "Project Details ",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 59,
@@ -469,6 +469,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn3.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.Comments.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -507,7 +510,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1686873349075,
+                      "columnUpdatedAt": 1689008057262,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -523,7 +526,8 @@
                         "OrderId",
                         "rowIndex",
                         "S3PlateMapLocation",
-                        "BatchId"
+                        "BatchId",
+                        "Comments"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -899,6 +903,36 @@
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
+                        },
+                        "Comments": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "Comments",
+                          "id": "Comments",
+                          "alias": "Comments",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Comments",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{OpenBatchTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Comments\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "j1q6i3sr5l",
@@ -930,7 +964,7 @@
                       ],
                       "topRow": 0,
                       "bottomRow": 4,
-                      "tooltip": "Add New Batch",
+                      "tooltip": "Add New Project",
                       "parentRowSpace": 10,
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
@@ -1039,12 +1073,12 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "Project",
+                      "labelText": "Project in CDD",
                       "searchTags": [
                         "dropdown"
                       ],
                       "topRow": 15,
-                      "bottomRow": 19,
+                      "bottomRow": 20,
                       "parentRowSpace": 10,
                       "labelWidth": "14",
                       "type": "SELECT_WIDGET",
@@ -1216,7 +1250,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Add New Batch",
+                      "text": "Add New Project",
                       "key": "kcxf30ixa9",
                       "isDeprecated": false,
                       "rightColumn": 41,
@@ -1514,7 +1548,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "width": 456,
+              "width": 484,
               "minDynamicHeight": 24
             },
             {

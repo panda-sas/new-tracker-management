@@ -36,6 +36,16 @@
           "data": [
             "BatchId",
             "Scientist",
+            "CheckoutDate",
+            "TentativeReturnDate",
+            "IsReturned",
+            "IsResultedUploadedToCDD",
+            "ActualReturnDate",
+            "Purpose",
+            "CDDResultURL",
+            "Reviewer",
+            "IsReviewed",
+            "ReviewDate",
             "Comments"
           ]
         },

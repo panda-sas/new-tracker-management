@@ -86,7 +86,7 @@
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 5,
-                      "bottomRow": 9,
+                      "bottomRow": 10,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -102,7 +102,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "All Batches",
+                      "text": "All Projects",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 59,
@@ -148,7 +148,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "A list of all batches ordered and received in SACLab",
+                      "text": "A list of all projects running in SACLab",
                       "key": "nf5ngvo9vw",
                       "isDeprecated": false,
                       "rightColumn": 36,
@@ -470,7 +470,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1686521225878,
+                      "columnUpdatedAt": 1689014563347,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -478,7 +478,6 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "Target",
-                        "Location",
                         "Scientist",
                         "Project",
                         "customColumn2",
@@ -488,6 +487,7 @@
                         "IsInitialCheckedOut",
                         "ReceivedDate",
                         "CDDRegisteredDate",
+                        "Location",
                         "CDDImportFileName",
                         "EditActions1",
                         "rowIndex",
@@ -937,8 +937,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Physically Received?",

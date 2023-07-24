@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\t\n\t\"OrderId\" : {{appsmith.URL.queryParams.OrderId}},\n\t\"Target\": {{TargetSelect. selectedOptionValue }},\t\n\t\"Scientist\": {{ScientistSelect. selectedOptionValue }},\n\t\"Project\": {{ProjectSelect. selectedOptionValue }},\n\t\"BatchId\": {{Generator.getUUID()}},\n\t\"IsPhysicallyReceived\" : {{false}},\n\t\"IsCDDRegistered\" : {{false}},\n\t\"IsInitialCheckedOut\" : {{false}},\n\t\"S3PlateMapLocation\": {{PlateMapFilePicker.files[0] && S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue)}}\n}\n"
+          "data": "{\t\n\t\"OrderId\" : {{appsmith.URL.queryParams.OrderId}},\n\t\"Target\": {{TargetSelect. selectedOptionValue }},\t\n\t\"Scientist\": {{ScientistSelect. selectedOptionValue }},\n\t\"Project\": {{ProjectSelect. selectedOptionValue }},\n\t\"BatchId\": {{Generator.getUUID()}},\n\t\"IsPhysicallyReceived\" : {{false}},\n\t\"IsCDDRegistered\" : {{false}},\n\t\"IsInitialCheckedOut\" : {{false}},\n\t\"S3PlateMapLocation\": {{PlateMapFilePicker.files[0] ? S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue): \"NA\"}}\n\t\n}\n"
         },
         "sheetName": {
           "data": "Batch"
@@ -74,7 +74,7 @@
     "messages": [],
     "jsonPathKeys": [
       "Generator.getUUID()",
-      "PlateMapFilePicker.files[0] && S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue)",
+      "PlateMapFilePicker.files[0] ? S3.generateS3ObjectPath(appsmith.URL.queryParams.Dispatcher, TargetSelect.selectedOptionValue): \"NA\"",
       "ProjectSelect. selectedOptionValue ",
       "ScientistSelect. selectedOptionValue ",
       "TargetSelect. selectedOptionValue ",

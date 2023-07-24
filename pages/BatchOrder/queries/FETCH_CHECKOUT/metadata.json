@@ -33,7 +33,10 @@
           }
         },
         "projection": {
-          "data": []
+          "data": [
+            "BatchId",
+            "Scientist"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"

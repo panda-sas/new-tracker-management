@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "SNetEmail",
+    "pageId": "CheckOut",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CheckOut_SNetEmail",
+  "deleted": false,
+  "gitSyncId": "6485e721ede8e07d8882fa73_6499e87af19a963549766e60"
+}

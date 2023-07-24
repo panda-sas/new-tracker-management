@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 860,
+          "bottomRow": 1080,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -33,7 +33,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 24,
-              "bottomRow": 86,
+              "bottomRow": 108,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -64,7 +64,7 @@
                   "widgetName": "Canvas111",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 580,
+                  "bottomRow": 800,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -84,13 +84,13 @@
                   ],
                   "children": [
                     {
-                      "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                      "boxShadow": "none",
                       "borderColor": "",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 5,
-                      "isSortable": false,
-                      "onPageChange": "{{getAllCustomers.run()}}",
+                      "isSortable": true,
+                      "onPageChange": "",
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
                       "animateLoading": true,
@@ -163,7 +163,7 @@
                       "isVisible": true,
                       "enableClientSideSearch": true,
                       "version": 1,
-                      "totalRecordsCount": 0,
+                      "totalRecordsCount": "",
                       "isLoading": false,
                       "childStylesheet": {
                         "button": {
@@ -188,7 +188,7 @@
                           "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                         }
                       },
-                      "borderRadius": "0.375rem",
+                      "borderRadius": "0px",
                       "columnUpdatedAt": 1684168712891,
                       "defaultSelectedRowIndices": [
                         0
@@ -220,11 +220,17 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "onPageChange"
+                        },
+                        {
+                          "key": "onPageSizeChange"
                         }
                       ],
                       "compactMode": "DEFAULT",
                       "displayName": "Table",
-                      "bottomRow": 53,
+                      "bottomRow": 78,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -244,6 +250,7 @@
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
+                      "onPageSizeChange": "",
                       "parentColumnSpace": 17.9375,
                       "dynamicTriggerPathList": [
                         {
@@ -381,7 +388,8 @@
                           "cellBackground": "",
                           "inputFormat": "MM/DD/YYYY",
                           "outputFormat": "MM/DD/YYYY",
-                          "sticky": ""
+                          "sticky": "",
+                          "shortcuts": false
                         },
                         "TrackingID": {
                           "allowCellWrapping": false,
@@ -543,7 +551,7 @@
                           "width": 150,
                           "originalId": "customColumn1",
                           "id": "customColumn1",
-                          "alias": "Batch",
+                          "alias": "Project",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "button",
@@ -556,7 +564,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": true,
-                          "label": "Batch",
+                          "label": "Project",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "",
@@ -568,7 +576,7 @@
                           "borderRadius": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
                           "boxShadow": "{{OpenOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
-                          "buttonLabel": "Add/View Batch",
+                          "buttonLabel": "Add/View Project",
                           "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": OpenOrdersTable.selectedRow.OrderId, \"Scientist\" : OpenOrdersTable.selectedRow.Scientist, \"Dispatcher\": OpenOrdersTable.selectedRow.Dispatcher}, 'SAME_WINDOW')}}",
                           "sticky": ""
                         },
@@ -606,7 +614,7 @@
                       "borderWidth": "\n",
                       "onRowSelected": "",
                       "key": "mi706qsnar",
-                      "canFreezeColumn": false,
+                      "canFreezeColumn": true,
                       "isDeprecated": false,
                       "rightColumn": 64,
                       "textSize": "0.875rem",
@@ -616,7 +624,7 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "gplhqyt2k8",
-                      "serverSidePaginationEnabled": false,
+                      "serverSidePaginationEnabled": true,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
@@ -690,7 +698,7 @@
                   "widgetName": "Canvas115",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 580,
+                  "bottomRow": 800,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -707,7 +715,7 @@
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 2,
-                      "isSortable": false,
+                      "isSortable": true,
                       "onPageChange": "{{getAllCustomers.run()}}",
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -750,7 +758,7 @@
                       "defaultSelectedRowIndex": 0,
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisibleFilters": false,
+                      "isVisibleFilters": true,
                       "isVisible": true,
                       "enableClientSideSearch": true,
                       "version": 1,
@@ -796,6 +804,9 @@
                       "dynamicPropertyPathList": [
                         {
                           "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
                         }
                       ],
                       "compactMode": "DEFAULT",
@@ -958,7 +969,7 @@
                           "width": 150,
                           "originalId": "customColumn1",
                           "id": "customColumn1",
-                          "alias": "Batch",
+                          "alias": "Project",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "button",
@@ -971,7 +982,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": true,
-                          "label": "Batch",
+                          "label": "Project",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "",
@@ -983,15 +994,15 @@
                           "borderRadius": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
                           "boxShadow": "{{AllOrdersTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
-                          "buttonLabel": "Add/View Batch",
-                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": AllOrdersTable.selectedRow.OrderId}, 'SAME_WINDOW')}}",
+                          "buttonLabel": "Add/View Project",
+                          "onClick": "{{navigateTo('BatchOrder',{\"OrderId\": AllOrdersTable.selectedRow.OrderId, \"Scientist\" : AllOrdersTable.selectedRow.Scientist, \"Dispatcher\": AllOrdersTable.selectedRow.Dispatcher}, 'SAME_WINDOW')}}",
                           "sticky": ""
                         }
                       },
                       "borderWidth": "\n0.5",
                       "onRowSelected": "",
                       "key": "mi706qsnar",
-                      "canFreezeColumn": false,
+                      "canFreezeColumn": true,
                       "isDeprecated": false,
                       "rightColumn": 63,
                       "textSize": "0.875rem",
@@ -1001,7 +1012,7 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "14wwifmi84",
-                      "serverSidePaginationEnabled": false,
+                      "serverSidePaginationEnabled": true,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
@@ -1029,7 +1040,7 @@
               "isDeprecated": false,
               "rightColumn": 64,
               "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
-              "dynamicHeight": "FIXED",
+              "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "22ker1dkts",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "defaultTab": "",
@@ -1056,8 +1067,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "originalTopRow": 24,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
+              "originalBottomRow": 108,
               "minDynamicHeight": 10
             },
             {

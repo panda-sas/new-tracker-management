@@ -34,11 +34,12 @@
         },
         "projection": {
           "data": [
+            "BatchId",
             "OrderId",
-            "Scientist",
-            "S3PlateMapLocation",
             "Target",
-            "BatchId"
+            "Scientist",
+            "Comments",
+            "S3PlateMapLocation"
           ]
         },
         "queryFormat": {
